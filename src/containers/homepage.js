@@ -8,15 +8,25 @@ import BoxFour from './boxFour.js'
 
 class HomePageContainer extends React.Component {
 
-    constructor() {
-        super()
+    // this is needed only to pass information down to a componenet
+    constructor(props) {
+        super(props);
+
+        this.state = {
+        mainTitle: ['John Duncan, Junior Developer']
+        }
+
+        
     }
+
+    
+  
 
  render() {
      return(
         <div>
             
-            < TopBar />
+            < TopBar mainTitle={this.state.mainTitle} />
             <h1> Hello World!   </h1>
             <div id="flex-parent-main">
                 <BoxOne />

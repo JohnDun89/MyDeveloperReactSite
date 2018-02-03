@@ -5,7 +5,7 @@ class BoxFour extends React.Component {
 
     render() {
         return (
-            <div class="box">
+            <div className="box">
                 <h1>Box Four</h1>
             </div>
         )
