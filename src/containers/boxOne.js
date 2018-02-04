@@ -12,11 +12,16 @@ class BoxOne extends React.Component {
         this.setState((prevState) => ({
             toggle: !prevState.toggle
         }),
-        console.log(this.state)
+        
+        
         );
+        console.log(this.state)
+        this.passClickToParent(this.state)
     }
 
-
+    passClickToParent = (event) => {
+        this.props.callBackFromParent(event)
+    }
 
 
     render() {
