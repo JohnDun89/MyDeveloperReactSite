@@ -16,18 +16,17 @@ class BoxOne extends React.Component {
         
         );
         console.log(this.state)
-        this.passClickToParent(this.state)
+        this.passClickToParent(this.state.toggle)
     }
 
     passClickToParent = (event) => {
         this.props.callBackFromParent(event)
-    }
-
+    } 
 
     render() {
         return (
             <div className="box"
-                onClick={this.eventHandler}>
+                onClick={this.eventHandler} >
                 <h1>Box One</h1>
             </div>
         )

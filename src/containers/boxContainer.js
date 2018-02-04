@@ -11,8 +11,12 @@ class BoxContainer extends React.Component {
     }
 
 
-    childToParent(dataFromBox) {
-        console.log(dataFromBox)
+
+
+    childToParent(event, callback) {   
+        if (event === true ) {
+            console.log(event)
+        }    
         console.log('hit')
     }
 
