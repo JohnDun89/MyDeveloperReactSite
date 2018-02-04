@@ -8,16 +8,19 @@ class BoxContainer extends React.Component {
     constructor(props){
         super(props) 
         this.state = {toggleBoxes: true}
+        this.togglecontent = this.togglecontent(this)
     }
 
-
-
-
-    childToParent(event, callback) {   
+    childToParent(event) {   
         if (event === true ) {
-            console.log(event)
+            console.log(event)  
+            this.togglecontent
         }    
-        console.log('hit')
+    }
+
+    componentDidMount(){
+
+        
     }
 
     togglecontent() {
@@ -26,14 +29,12 @@ class BoxContainer extends React.Component {
         })
     }
 
-
-    // would swap the renders here. 
-    renderAlternativeOne () {
+    renderAlternative () {
         if (this.state.toggleBoxes) {
            return (
                <div>
                    <BoxOne callBackFromParent={this.childToParent} />
-               <BoxTwo />
+                     <BoxTwo />
                </div>
            )
         } else{
@@ -44,7 +45,7 @@ class BoxContainer extends React.Component {
     render() {
         return (
             <div id="flex-parent-main">          
-            {this.renderAlternativeOne()}                      
+            {this.renderAlternative()}                      
                     <BoxThree />
                     <BoxFour />
             </div>
