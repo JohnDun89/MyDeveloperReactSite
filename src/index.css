@@ -9,7 +9,7 @@ body {
   background-color: blue;
   height: 100px; }
 
-#flex-parent-main {
+.flex-parent-main {
   background-color: blanchedalmond;
   width: 100%;
   flex-wrap: 2;

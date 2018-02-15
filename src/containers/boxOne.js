@@ -26,7 +26,7 @@ class BoxOne extends React.Component {
 
     render() {
         return (
-            <div className="box"
+            <div 
                 onClick={this.eventHandler} >
                 <h1>Box One</h1>
             </div>
