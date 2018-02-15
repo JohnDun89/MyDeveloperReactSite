@@ -15,6 +15,7 @@ class BoxContainer extends React.Component {
         }
         this.childToParent = this.childToParent.bind(this)
         this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
+        this.renderWebGl = this.renderWebGl.bind(this)
     }
 // ----------------------------------------------------- Box One --------------------------// 
     childToParent(event) {   
@@ -57,13 +58,24 @@ class BoxContainer extends React.Component {
 
     // ----------------------------------------------------- Box Two --------------------------// 
 
+    renderBoxTwo () {
+        return (
+            <div>
+                <BoxTwo actionBoxTwo={this.renderWebGl}/>
+            </div>
+        )
+    }
+
+    renderWebGl () {
+        console.log('render box two')
+    }
 
     render() {
         return (
             <div id="flex-parent-main">          
             {this.renderBoxOne()} 
-                              
-            <BoxTwo />
+            {this.renderBoxTwo()}                 
+         
             <BoxThree />
             <BoxFour />
             </div>
