@@ -9,24 +9,25 @@ import Cv from './cv.js'
 class BoxContainer extends React.Component {
     constructor(props){
         super(props) 
-        this.state = {toggleBoxes: true}
+        this.state = {
+            BoxOne: true,
+            BoxTwo: true
+        }
         this.childToParent = this.childToParent.bind(this)
         this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
     }
-
+// ----------------------------------------------------- Box One --------------------------// 
     childToParent(event) {   
         if (event === true ) {
             console.log(event)  
             //I will have a toggoel for each box
-            this.setState({toggleBoxes: false})
+            this.setState({BoxOne: false})
             this.expandBoxOne()
         } 
-       
-    
     }
 
     closeClickedOnCv(){
-        this.setState({toggleBoxes: true})
+        this.setState({BoxOne: true})
     }
 
     expandBoxOne() {
@@ -38,13 +39,8 @@ class BoxContainer extends React.Component {
         )
     }
 
-    componentDidMount(){  
-    }
-
-
-
-    renderAlternative () {
-        if (this.state.toggleBoxes === true) {
+    renderBoxOne () {
+        if (this.state.BoxOne === true) {
            return (
                <div>
                    <BoxOne callBackFromParent={this.childToParent} /> 
@@ -59,10 +55,13 @@ class BoxContainer extends React.Component {
         }
     }
 
+    // ----------------------------------------------------- Box Two --------------------------// 
+
+
     render() {
         return (
             <div id="flex-parent-main">          
-            {this.renderAlternative()} 
+            {this.renderBoxOne()} 
                               
             <BoxTwo />
             <BoxThree />
