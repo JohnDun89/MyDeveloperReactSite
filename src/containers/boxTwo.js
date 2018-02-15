@@ -7,7 +7,7 @@ class BoxTwo extends React.Component {
         return (
             <div 
             onClick={this.props.actionBoxTwo}>
-                <h1>Box Two</h1>
+                <h1 className="hero-text">WebGL</h1>
             </div>
         )
     }

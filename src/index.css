@@ -33,6 +33,12 @@ body {
   display: flex;
   justify-content: right; }
 
+.hero-text {
+  font-family: "Cormorant", serif;
+  font-size: 170px;
+  font-weight: bold;
+  color: blanchedalmond; }
+
 #web-gl-box {
   background-color: teal;
   width: 800px;

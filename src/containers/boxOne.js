@@ -28,7 +28,7 @@ class BoxOne extends React.Component {
         return (
             <div 
                 onClick={this.eventHandler} >
-                <h1>Box One</h1>
+                <h1 className="hero-text">C.V.</h1>
             </div>
         )
     }
