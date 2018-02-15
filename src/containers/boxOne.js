@@ -9,6 +9,7 @@ class BoxOne extends React.Component {
     }
 
     eventHandler(event) {
+        console.log(event)
         this.setState((prevState) => ({
             toggle: !prevState.toggle
         }),

@@ -11,6 +11,7 @@ class BoxContainer extends React.Component {
         super(props) 
         this.state = {toggleBoxes: true}
         this.childToParent = this.childToParent.bind(this)
+        this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
     }
 
     childToParent(event) {   
@@ -19,14 +20,20 @@ class BoxContainer extends React.Component {
             //I will have a toggoel for each box
             this.setState({toggleBoxes: false})
             this.expandBoxOne()
-        }    
+        } 
+       
+    
+    }
+
+    closeClickedOnCv(){
+        this.setState({toggleBoxes: true})
     }
 
     expandBoxOne() {
         //here I will reuturn my cv componenet
         return (
         <div>
-            <Cv />
+            <Cv  action={this.closeClickedOnCv}/>
         </div>
         )
     }
