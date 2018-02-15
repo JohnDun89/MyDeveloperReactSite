@@ -8,20 +8,24 @@ class BoxContainer extends React.Component {
     constructor(props){
         super(props) 
         this.state = {toggleBoxes: true}
-        // this.togglecontent = this.togglecontent(this)
         this.childToParent = this.childToParent.bind(this)
     }
 
     childToParent(event) {   
         if (event === true ) {
             console.log(event)  
+            //I will have a toggoel for each box
             this.setState({toggleBoxes: false})
+            this.expandBoxOne()
         }    
     }
 
-    componentDidMount(){
+    expandBoxOne() {
+        //here I will reuturn my cv componenet
+        return (<div></div>)
+    }
 
-        
+    componentDidMount(){  
     }
 
 
@@ -31,7 +35,7 @@ class BoxContainer extends React.Component {
            return (
                <div>
                    <BoxOne callBackFromParent={this.childToParent} />
-                     <BoxTwo />
+
                </div>
            )
         } else{
@@ -43,8 +47,9 @@ class BoxContainer extends React.Component {
         return (
             <div id="flex-parent-main">          
             {this.renderAlternative()}                      
-                    <BoxThree />
-                    <BoxFour />
+            <BoxTwo />
+            <BoxThree />
+            <BoxFour />
             </div>
         )
     }
