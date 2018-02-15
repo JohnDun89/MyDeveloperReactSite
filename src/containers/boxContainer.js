@@ -72,7 +72,6 @@ class BoxContainer extends React.Component {
                 </div>
             )
         }
-
     }
 
     toggleBoxTwo () {

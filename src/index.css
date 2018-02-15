@@ -42,3 +42,10 @@ body {
   justify-content: right;
 }
 
+
+#web-gl-box {
+  background-color: teal;
+  width: 800px;
+  height: 400px;
+
+}

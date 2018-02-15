@@ -12,7 +12,7 @@ class WebGl extends React.Component {
 
     render() {
         return (
-            <div className="expanded-content">
+            <div className="expanded-content" id="web-gl-box">
                 <div className="button-container">
                     <button className="back-button" onClick={this.props.webGlAction} type="button" >Close</button>
                 </div>
