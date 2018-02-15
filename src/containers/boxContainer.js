@@ -19,10 +19,10 @@ class BoxContainer extends React.Component {
         this.toggleBoxTwo = this.toggleBoxTwo.bind(this)
     }
 // ----------------------------------------------------- Box One --------------------------// 
+//   the code here is longer than the other boxs as it allows data to be passed from child to parent.
     childToParent(event) {   
         if (event === true ) {
             console.log(event)  
-            //I will have a toggoel for each box
             this.setState({BoxOne: false})
             this.expandBoxOne()
         } 
@@ -33,7 +33,6 @@ class BoxContainer extends React.Component {
     }
 
     expandBoxOne() {
-        //here I will reuturn my cv componenet
         return (
         <div>
             <Cv  action={this.closeClickedOnCv}/>
