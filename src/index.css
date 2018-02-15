@@ -23,12 +23,17 @@ body {
 }
 
 .box {
-
   flex: 0 auto;
   background-color: tomato;
   margin: 2%;
   padding: 5px;
   width: 550px;
   height: 400px;
+}
+
+.expanded-content {
+  background-color: tomato;
+  margin: 2%;
+  padding: 5px;
 }
 
