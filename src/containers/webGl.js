@@ -14,9 +14,9 @@ class WebGl extends React.Component {
         return (
             <div className="expanded-content">
                 <div className="button-container">
-                    <button className="back-button" onClick={this.props.action} type="button" >Close</button>
+                    <button className="back-button" onClick={this.props.webGlAction} type="button" >Close</button>
                 </div>
-              <p></p>
+              <p>Web Gl content</p>
 
             </div>
         )

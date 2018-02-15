@@ -4,6 +4,7 @@ import BoxTwo from './boxTwo.js'
 import BoxThree from './boxThree.js'
 import BoxFour from './boxFour.js'
 import Cv from './cv.js'
+import WebGl from './webGl.js'
 
 
 class BoxContainer extends React.Component {
@@ -15,7 +16,7 @@ class BoxContainer extends React.Component {
         }
         this.childToParent = this.childToParent.bind(this)
         this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
-        this.renderWebGl = this.renderWebGl.bind(this)
+        this.toggleBoxTwo = this.toggleBoxTwo.bind(this)
     }
 // ----------------------------------------------------- Box One --------------------------// 
     childToParent(event) {   
@@ -59,23 +60,40 @@ class BoxContainer extends React.Component {
     // ----------------------------------------------------- Box Two --------------------------// 
 
     renderBoxTwo () {
-        return (
-            <div>
-                <BoxTwo actionBoxTwo={this.renderWebGl}/>
-            </div>
-        )
+        if (this.state.BoxTwo === true) {
+            return (
+                <div>
+                    <BoxTwo actionBoxTwo={this.toggleBoxTwo} />
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <WebGl webGlAction={this.toggleBoxTwo} />
+                </div>
+            )
+        }
+
     }
 
-    renderWebGl () {
-        console.log('render box two')
+    toggleBoxTwo () {
+       this.setState({BoxTwo: !this.state.BoxTwo})
     }
+
+        // ----------------------------------------------------- Box Three --------------------------// 
+
+        // ----------------------------------------------------- Box Four --------------------------// 
+
+
+        // ----------------------------------------------------- Main Container Render --------------------------// 
+
 
     render() {
         return (
             <div id="flex-parent-main">          
             {this.renderBoxOne()} 
-            {this.renderBoxTwo()}                 
-         
+            {this.renderBoxTwo() || this.toggleBoxTwo()}                 
+            
             <BoxThree />
             <BoxFour />
             </div>
