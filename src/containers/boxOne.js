@@ -1,4 +1,5 @@
 import React from 'react';
+import Cv from './cv.js'
 
 class BoxOne extends React.Component {
 

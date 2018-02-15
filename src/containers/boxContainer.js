@@ -22,7 +22,11 @@ class BoxContainer extends React.Component {
 
     expandBoxOne() {
         //here I will reuturn my cv componenet
-        return (<div></div>)
+        return (
+        <div>
+            <Cv />
+        </div>
+        )
     }
 
     componentDidMount(){  
