@@ -3,6 +3,8 @@ import BoxOne from './boxOne.js'
 import BoxTwo from './boxTwo.js'
 import BoxThree from './boxThree.js'
 import BoxFour from './boxFour.js'
+import Cv from './cv.js'
+
 
 class BoxContainer extends React.Component {
     constructor(props){
@@ -35,22 +37,26 @@ class BoxContainer extends React.Component {
 
 
     renderAlternative () {
-        if (this.state.toggleBoxes) {
+        if (this.state.toggleBoxes === true) {
            return (
                <div>
-                   <BoxOne callBackFromParent={this.childToParent} />
-
+                   <BoxOne callBackFromParent={this.childToParent} /> 
                </div>
            )
         } else{
-            return null;
+            return (
+                <div>
+                    {this.expandBoxOne()} 
+                </div>
+            );
         }
     }
 
     render() {
         return (
             <div id="flex-parent-main">          
-            {this.renderAlternative()}                      
+            {this.renderAlternative()} 
+                              
             <BoxTwo />
             <BoxThree />
             <BoxFour />
