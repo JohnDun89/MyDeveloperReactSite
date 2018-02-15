@@ -8,13 +8,14 @@ class BoxContainer extends React.Component {
     constructor(props){
         super(props) 
         this.state = {toggleBoxes: true}
-        this.togglecontent = this.togglecontent(this)
+        // this.togglecontent = this.togglecontent(this)
+        this.childToParent = this.childToParent.bind(this)
     }
 
     childToParent(event) {   
         if (event === true ) {
             console.log(event)  
-            this.togglecontent
+            this.setState({toggleBoxes: false})
         }    
     }
 
@@ -23,11 +24,7 @@ class BoxContainer extends React.Component {
         
     }
 
-    togglecontent() {
-        this.setState({
-            toggleBoxes: !this.state.toggleBoxes
-        })
-    }
+
 
     renderAlternative () {
         if (this.state.toggleBoxes) {
