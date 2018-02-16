@@ -3,7 +3,6 @@ import TopBar from './topBar.js';
 import BoxContainer from './boxContainer.js';
 
 
-
 class HomePageContainer extends React.Component {
 
     // this is needed only to pass information down to a componenet
