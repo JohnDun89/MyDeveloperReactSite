@@ -93,7 +93,7 @@ class BoxContainer extends React.Component {
         } else {
             return (
                 <div >
-                    < LinksToTwitterAndGit linkAction={this.toggleBoxThree} />
+                    < LinksToTwitterAndGit action={this.toggleBoxThree} />
                 </div>
             )
         }
