@@ -1,15 +1,16 @@
 import React from 'react'
 
-class BoxThre extends React.Component {
+class BoxThree extends React.Component {
 
 
     render() {
         return (
-            <div className="box">
+            <div 
+                onClick={this.props.actionBoxThree}>
                 <h1>Box Three</h1>
             </div>
         )
     }
 }
 
-export default BoxThre;
+export default BoxThree;

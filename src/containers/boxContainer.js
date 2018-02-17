@@ -5,6 +5,7 @@ import BoxThree from './boxThree.js'
 import BoxFour from './boxFour.js'
 import Cv from './cv.js'
 import WebGl from './webGl.js'
+import LinksToTwitterAndGit from './linksToTwitterAndGit.js'
 
 
 class BoxContainer extends React.Component {
@@ -18,6 +19,7 @@ class BoxContainer extends React.Component {
         this.childToParent = this.childToParent.bind(this)
         this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
         this.toggleBoxTwo = this.toggleBoxTwo.bind(this)
+        this.toggleBoxThree = this.toggleBoxThree.bind(this)
     }
 // ----------------------------------------------------- Box One --------------------------// 
 //   the code here is longer than the other boxes as it allows data to be passed from child to parent.
@@ -91,7 +93,7 @@ class BoxContainer extends React.Component {
         } else {
             return (
                 <div >
-                    <p> This will contain a link to my git hub and twitter</p>
+                    < LinksToTwitterAndGit linkAction={this.toggleBoxThree} />
                 </div>
             )
         }
@@ -110,9 +112,10 @@ class BoxContainer extends React.Component {
         return (
             <div className="flex-parent-main">          
             {this.renderBoxOne()} 
-            {this.renderBoxTwo() || this.toggleBoxTwo()}                 
+            {this.renderBoxTwo() || this.toggleBoxTwo()}   
+            {this.renderBoxThree() || this.toggleBoxThree()}              
             
-            <BoxThree />
+           
             <BoxFour />
             </div>
         )
