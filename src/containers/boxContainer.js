@@ -12,7 +12,8 @@ class BoxContainer extends React.Component {
         super(props) 
         this.state = {
             BoxOne: true,
-            BoxTwo: true
+            BoxTwo: true,
+            BoxThree: true
         }
         this.childToParent = this.childToParent.bind(this)
         this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
@@ -80,6 +81,25 @@ class BoxContainer extends React.Component {
 
         // ----------------------------------------------------- Box Three --------------------------// 
 
+    renderBoxThree() {
+        if (this.state.BoxThree === true) {
+            return (
+                <div className="box">
+                    <BoxThree actionBoxThree={this.toggleBoxThree} />
+                </div>
+            )
+        } else {
+            return (
+                <div >
+                    <p> This will contain a link to my git hub and twitter</p>
+                </div>
+            )
+        }
+    }
+
+    toggleBoxThree() {
+        this.setState({ BoxThree: !this.state.BoxThree })
+    }
         // ----------------------------------------------------- Box Four --------------------------// 
 
 
