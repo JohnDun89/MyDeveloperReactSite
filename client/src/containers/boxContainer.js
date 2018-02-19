@@ -71,7 +71,7 @@ class BoxContainer extends React.Component {
         } else {
             return (
                 <div >
-                    <WebGl webGlAction={this.toggleBoxTwo} />
+                    <WebGl webGlAction={this.toggleBoxTwo } />
                 </div>
             )
         }
@@ -80,6 +80,8 @@ class BoxContainer extends React.Component {
     toggleBoxTwo () {
        this.setState({BoxTwo: !this.state.BoxTwo})
     }
+
+
 
         // ----------------------------------------------------- Box Three --------------------------// 
 

@@ -1,0 +1,45 @@
+.box, .expanded-content, #web-gl-box {
+  margin: 2%;
+  padding: 5px; }
+
+body {
+  font-family: "Cormorant", serif; }
+
+#nav-bar {
+  background-color: blue;
+  height: 100px; }
+
+.flex-parent-main {
+  background-color: blanchedalmond;
+  width: 100%;
+  flex-wrap: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap; }
+
+.box {
+  flex: 0 auto;
+  background-color: tomato;
+  width: 550px;
+  height: 400px; }
+
+.expanded-content {
+  background-color: tomato; }
+
+.button-container {
+  display: flex;
+  justify-content: right; }
+
+.hero-text {
+  font-family: "Cormorant", serif;
+  font-size: 170px;
+  font-weight: bold;
+  color: blanchedalmond; }
+
+#web-gl-box {
+  background-color: teal;
+  width: 800px;
+  height: 400px; }
