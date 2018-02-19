@@ -1,28 +1,15 @@
 {
-  "name": "google_maps_react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.1.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0",
-    "react-transition-group": "^1.2.1"
-  },
-  "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
-    "test": "jest",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "jest": "^22.1.4",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6"
-  }
+    "name": "example-create-react-app-express",
+    "version": "1.0.0",
+    "scripts": {
+        "client": "cd client && npm run start",
+        "server": "nodemon server.js",
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    },
+    "dependencies": {
+        "express": "^4.16.2"
+    },
+    "devDependencies": {
+        "concurrently": "^3.5.0"
+    }
 }
