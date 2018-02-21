@@ -95,6 +95,10 @@ class WebGl extends React.Component {
         initialize();
     }
 
+    onclose(){
+
+    }
+
 
     //here I need to unmount the component 
 
@@ -104,7 +108,7 @@ class WebGl extends React.Component {
             <main>
                 <div className="expanded-content" id="web-gl-box">
                     <div className="button-container" >
-                        <button className="back-button" onClick={this.props.webGlAction} type="button" >Close</button>
+                        <button className="back-button" onClick={this.props.webGlAction } type="button" >Close</button>
                     </div>
                     <div id='main_canvas_container'></div>
                     <p>Web Gl content</p>

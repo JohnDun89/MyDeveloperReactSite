@@ -21,9 +21,7 @@ class HomePageContainer extends React.Component {
             
             < TopBar mainTitle={this.state.mainTitle} />
             <h1> Codeclan graduate with a special interest in Front End. Enjoys React and SCSS particularily.    </h1>
-               
-              
-              
+
                 < BoxContainer />
             </div>
 

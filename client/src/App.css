@@ -23,9 +23,3 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-
-#main_canvas_container {
-  position: relative;
-  padding: 5%;
-  width: 700px;
-  height: 500px; }
