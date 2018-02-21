@@ -112,7 +112,8 @@ class BoxContainer extends React.Component {
 
     render() {
         return (
-            <div className="flex-parent-main">          
+            
+            <div className="flex-parent-main">  
             {this.renderBoxOne()} 
             {this.renderBoxTwo() || this.toggleBoxTwo()}   
             {this.renderBoxThree() || this.toggleBoxThree()}              

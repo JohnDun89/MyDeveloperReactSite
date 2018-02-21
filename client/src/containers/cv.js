@@ -3,15 +3,6 @@ import BackButton from './backButton.js'
 
 class Cv extends React.Component {
 
-  constructor(props) {
-      super(props)
-  }
-
-
-
-  backButtonPressed() {
-      console.log('back button ')
-  }
 
     render() {
         return (
