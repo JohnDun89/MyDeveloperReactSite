@@ -2,16 +2,13 @@
   margin: 2%;
   padding: 5px; }
 
-#main_canvas_container {
-  width: 200px;
-  background-color: pink; }
-
 body {
   font-family: "Cormorant", serif; }
 
 #nav-bar {
   background-color: blue;
-  height: 100px; }
+  height: 100px;
+  z-index: 1; }
 
 .flex-parent-main {
   background-color: blanchedalmond;

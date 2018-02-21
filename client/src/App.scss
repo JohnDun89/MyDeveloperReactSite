@@ -28,3 +28,20 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#main_canvas_container{
+  position: relative;
+  padding: 5%;
+   width: 700px;
+   height: 500px;
+   
+}
+
+// #control-box{
+//   position: relative;
+//  width: 500px;
+//  height: 500px;
+// //  background-color: blue;
+// padding-top: 20px;
+// //  z-index: 4;
+// }

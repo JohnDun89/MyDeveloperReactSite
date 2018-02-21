@@ -8,11 +8,17 @@ class WebGl extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            open: true
+            open: false
         }
     }
 
+    // the component needs to change the scale fo the div rpior to mount. as right now it mounts with no content
 
+
+    componentWillMount() {
+        console.log(this.state.open)
+        document.querySelector('main_canvas_container')
+    }
 
     componentDidMount() {
 
@@ -27,8 +33,11 @@ class WebGl extends React.Component {
 
         // automatically detect assets path
         var APP_ASSETS_PATH = m_cfg.get_assets_path();
-
-
+        
+        // let div = React.createElement('div')
+        // div.id = 'canvas'
+        // ReactDOM.render(div, document.getElementById('main_canvas_container'))
+        
         
         function initialize() {
            
@@ -97,13 +106,8 @@ class WebGl extends React.Component {
                     <div className="button-container" >
                         <button className="back-button" onClick={this.props.webGlAction} type="button" >Close</button>
                     </div>
+                    <div id='main_canvas_container'></div>
                     <p>Web Gl content</p>
-
-                    <div id="main_canvas_container">
-
-                    </div>
-
-
                 </div>
             </main>
         )
