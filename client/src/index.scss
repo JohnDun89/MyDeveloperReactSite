@@ -16,9 +16,9 @@ $tomato: tomato;
   flex-flow: row wrap;
 }
 
-@mixin web-gl-display-size {
-  width: 700px;
-  height: 500px;
+@mixin fixed-height-and-width($height, $width) {
+  height: $height ;
+  width: $width ;
 }
 
 body {
@@ -43,8 +43,7 @@ body {
   @extend %small-padding;
   flex: 0 auto;
   background-color: $tomato;
-  width: 550px;
-  height: 400px;
+  @include fixed-height-and-width(400px, 550px);
 }
 
 .expanded-content {
@@ -70,14 +69,14 @@ body {
   background-color: teal;
   margin: 5px;
   @extend %small-padding;
-  width: 800px;
-  height: 600px;
+  @include fixed-height-and-width(610px, 800px);
+
 }
 
 #main_canvas_container{
   background-color: white;
   position: relative;
-   @include web-gl-display-size;
+  @include fixed-height-and-width(500px, 700px);
   padding: 5%;
 
 }

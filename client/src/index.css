@@ -24,8 +24,8 @@ body {
 .box {
   flex: 0 auto;
   background-color: tomato;
-  width: 550px;
-  height: 400px; }
+  height: 400px;
+  width: 550px; }
 
 .expanded-content {
   background-color: tomato; }
@@ -49,12 +49,12 @@ body {
   flex-flow: row wrap;
   background-color: teal;
   margin: 5px;
-  width: 800px;
-  height: 600px; }
+  height: 610px;
+  width: 800px; }
 
 #main_canvas_container {
   background-color: white;
   position: relative;
-  width: 700px;
   height: 500px;
+  width: 700px;
   padding: 5%; }
