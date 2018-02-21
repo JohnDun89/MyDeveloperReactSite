@@ -32,23 +32,23 @@ body {
 }
 
 .flex-parent-main{
+  @include flex-basics(row);
   background-color: blanchedalmond;
   width: 100%;
-  @include flex-basics(row);
   flex-wrap: 2;
 
 }
 
 .box {
   @extend %small-padding;
+  @include fixed-height-and-width(400px, 550px);
   flex: 0 auto;
   background-color: $tomato;
-  @include fixed-height-and-width(400px, 550px);
 }
 
 .expanded-content {
-  background-color: $tomato;
   @extend %small-padding;
+  background-color: $tomato;
 }
 
 .button-container {
@@ -65,18 +65,17 @@ body {
 
 
 #web-gl-box {
+  @extend %small-padding;
+  @include fixed-height-and-width(610px, 800px);
   @include flex-basics(colum);
   background-color: teal;
   margin: 5px;
-  @extend %small-padding;
-  @include fixed-height-and-width(610px, 800px);
-
 }
 
 #main_canvas_container{
+  @include fixed-height-and-width(500px, 700px);
   background-color: white;
   position: relative;
-  @include fixed-height-and-width(500px, 700px);
   padding: 5%;
 
 }
