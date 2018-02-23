@@ -6,6 +6,7 @@ import BoxFour from './boxFour.js'
 import Cv from './cv.js'
 import WebGl from './webGl.js'
 import LinksToTwitterAndGit from './linksToTwitterAndGit.js'
+import Tilt from 'react-tilt'
 
 
 class BoxContainer extends React.Component {
@@ -48,9 +49,11 @@ class BoxContainer extends React.Component {
     renderBoxOne () {
         if (this.state.BoxOne === true) {
            return (
+               <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true}}>
                <div className="box">
-                   <BoxOne callBackFromParent={this.childToParent} /> 
+                   <BoxOne  callBackFromParent={this.childToParent} /> 
                </div>
+               </Tilt>
            )
         } else{
             return (
@@ -66,15 +69,19 @@ class BoxContainer extends React.Component {
     renderBoxTwo () {
         if (this.state.BoxTwo === true) {
             return (
+                <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
                 <div className="box">
                     <BoxTwo actionBoxTwo={this.toggleBoxTwo} />
                 </div>
+                </Tilt>
             )
         } else {
             return (
+
                 <div >
                     <WebGl webGlAction={this.toggleBoxTwo || this.state.BoxTwo} />
                 </div>
+               
             )
         }
     }
@@ -92,9 +99,11 @@ class BoxContainer extends React.Component {
     renderBoxThree() {
         if (this.state.BoxThree === true) {
             return (
+                <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
                 <div className="box">
                     <BoxThree actionBoxThree={this.toggleBoxThree} />
                 </div>
+                </Tilt>
             )
         } else {
             return (

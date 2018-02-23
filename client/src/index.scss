@@ -75,5 +75,9 @@ body {
   background-color: white;
   position: relative;
   padding: 5%;
+}
+
+.tilt{
+    @extend %small-padding;
 
 }
