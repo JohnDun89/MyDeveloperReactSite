@@ -41,7 +41,7 @@ class BoxContainer extends React.Component {
     expandBoxOne() {
         return (
         <div>
-            <Cv  action={this.closeClickedOnCv}/>
+           
         </div>
         )
     }
@@ -58,7 +58,7 @@ class BoxContainer extends React.Component {
         } else{
             return (
                 <div>
-                    {this.expandBoxOne()} 
+                    <Cv action={this.closeClickedOnCv} />
                 </div>
             );
         }
@@ -88,6 +88,25 @@ class BoxContainer extends React.Component {
 
     toggleBoxTwo () {
        this.setState({BoxTwo: !this.state.BoxTwo})
+    }
+
+    renderToggle(Component1, Component2, StateBoolean, toggleFunction) {
+        console.log(Component1,Component2,StateBoolean)
+        if (StateBoolean === true) {
+            return (
+                <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
+                    <div className="box">
+                        <Component1 action={this.toggleBoxTwo} />
+                    </div>
+                </Tilt>
+            )
+        } else {
+            return (
+                <div >
+                    <Component2 close={toggleFunction || StateBoolean} />
+                </div>
+            )
+        }
     }
 
 
@@ -128,7 +147,8 @@ class BoxContainer extends React.Component {
             
             <div className="flex-parent-main">  
             {this.renderBoxOne()} 
-            {this.renderBoxTwo() || this.toggleBoxTwo()}   
+            {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwo)}
+            {/* {this.renderBoxTwo() || this.toggleBoxTwo()}    */}
             {this.renderBoxThree() || this.toggleBoxThree()}              
             
            

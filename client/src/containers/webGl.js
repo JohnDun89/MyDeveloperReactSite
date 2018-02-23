@@ -104,7 +104,7 @@ class WebGl extends React.Component {
             <main>
                 <div className="expanded-content" id="web-gl-box">
                     <div className="button-container" >    
-                            <button className="back-button" onClick={this.props.webGlAction} type="button" >Close</button>
+                            <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                     </div>
                     <div>
                     <p>Left click to rotate, mouse wheel to zoom and right click to move.</p>

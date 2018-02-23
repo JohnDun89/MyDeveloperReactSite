@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import HomepageContainer from './containers/homepage.js';
-//  import ReactCSSTransitionGroup from './react/lib/ReactCSSTransitionGroup';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
-
+import Animate from 'animate.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class App extends Component {
   state = {
