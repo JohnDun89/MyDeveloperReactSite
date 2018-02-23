@@ -5,12 +5,15 @@ import b4w from "blend4web";
 class WebGl extends React.Component {
 
 
+
     constructor(props) {
         super(props)
         this.state = {
             BoxTwo: true
         }
     }
+
+    
 
     // the component needs to change the scale fo the div rpior to mount. as right now it mounts with no content
 
@@ -28,23 +31,13 @@ class WebGl extends React.Component {
     componentDidMount() {
 
 
-
-
         const m_app = b4w.app;
         const m_cfg = b4w.config;
         const m_data = b4w.data;
         const m_preloader = b4w.preloader;
         const m_ver = b4w.version;
-       
         var DEBUG = (m_ver.type() === "DEBUG");
-
-        // automatically detect assets path
         var APP_ASSETS_PATH = m_cfg.get_assets_path();
-        
-        // let div = React.createElement('div')
-        // div.id = 'canvas'
-        // ReactDOM.render(div, document.getElementById('main_canvas_container'))
-        
         
         function initialize() {
 
@@ -101,6 +94,7 @@ class WebGl extends React.Component {
 
     componentWillUnmount() {
         console.log('unmounted')
+        b4w.require("main").reset()
     }
 
 
