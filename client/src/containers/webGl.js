@@ -30,7 +30,7 @@ class WebGl extends React.Component {
 
     componentDidMount() {
 
-
+//aware this is not ideal for React. Sadly it is the only way B4W library will work.
         const m_app = b4w.app;
         const m_cfg = b4w.config;
         const m_data = b4w.data;
@@ -93,15 +93,10 @@ class WebGl extends React.Component {
     }
 
     componentWillUnmount() {
+        //resets library when componenet un mounts. will not work without this! 
         console.log('unmounted')
         b4w.require("main").reset()
     }
-
-
-
-
-    //here I need to unmount the component 
-
 
     render() {
         if (this.state.BoxTwo === true) {

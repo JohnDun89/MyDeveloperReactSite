@@ -64,14 +64,14 @@ body {
 
 #web-gl-box {
   @extend %small-padding;
-  @include fixed-height-and-width(610px, 800px);
+  @include fixed-height-and-width(800px, 1000px);
   @include flex-basics(colum);
   background-color: teal;
   margin: 5px;
 }
 
 #main_canvas_container{
-  @include fixed-height-and-width(500px, 700px);
+  @include fixed-height-and-width(600px, 900px);
   background-color: white;
   position: relative;
   padding: 5%;

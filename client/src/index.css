@@ -41,8 +41,8 @@ body {
   color: blanchedalmond; }
 
 #web-gl-box {
-  height: 610px;
-  width: 800px;
+  height: 800px;
+  width: 1000px;
   display: flex;
   flex-direction: colum;
   align-items: center;
@@ -53,8 +53,8 @@ body {
   margin: 5px; }
 
 #main_canvas_container {
-  height: 500px;
-  width: 700px;
+  height: 600px;
+  width: 900px;
   background-color: white;
   position: relative;
   padding: 5%; }
