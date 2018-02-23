@@ -8,7 +8,7 @@ class WebGl extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            open: false
+            BoxTwo: true
         }
     }
 
@@ -16,11 +16,18 @@ class WebGl extends React.Component {
 
 
     componentWillMount() {
-        console.log(this.state.open)
+        console.log(this.state.BoxTwo)
         document.querySelector('main_canvas_container')
+        return (
+            <main>
+                <div></div>
+            </main>
+        ) 
     }
 
     componentDidMount() {
+
+
 
 
         const m_app = b4w.app;
@@ -40,8 +47,7 @@ class WebGl extends React.Component {
         
         
         function initialize() {
-           
-           
+
             m_app.init({
                 canvas_container_id: 'main_canvas_container',
                 callback: initializeCallback,
@@ -49,7 +55,6 @@ class WebGl extends React.Component {
                 console_verbose: DEBUG,
                 autoresize: true
             });
-
         }
 
         function initializeCallback(canvas, success) {
@@ -60,7 +65,6 @@ class WebGl extends React.Component {
             }
 
             m_preloader.create_preloader();
-
             // ignore right-click on the canvas element
             canvas.oncontextmenu = function (e) {
                 e.preventDefault();
@@ -95,27 +99,35 @@ class WebGl extends React.Component {
         initialize();
     }
 
-    onclose(){
-
+    componentWillUnmount() {
+        console.log('unmounted')
     }
+
+
 
 
     //here I need to unmount the component 
 
 
     render() {
-        return (
+        if (this.state.BoxTwo === true) {
+            return(
             <main>
                 <div className="expanded-content" id="web-gl-box">
                     <div className="button-container" >
-                        <button className="back-button" onClick={this.props.webGlAction } type="button" >Close</button>
+                            <button className="back-button" onClick={this.props.webGlAction} type="button" >Close</button>
                     </div>
                     <div id='main_canvas_container'></div>
                     <p>Web Gl content</p>
                 </div>
             </main>
-        )
-    }
+            )
+        } else {
+            return(
+            <div></div>
+            )
+        }
+}
 }
 
 export default WebGl;
