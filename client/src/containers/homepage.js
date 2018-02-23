@@ -14,27 +14,44 @@ class HomePageContainer extends React.Component {
         displayMainContent: false,
         mainTitle: ['John Duncan, Junior Developer']
         }
-        this.removeSplash = this.removeSplash.bind(this) 
+        this.toggleContent = this.toggleContent.bind(this) 
+        this.renderContent = this.renderContent.bind(this)
     }
 
-    removeSplash() {
-        this.setState({ displayMainContent: true })
-        console.log('splash clicked')
+    renderContent() {
+            if (this.state.displayMainContent === true) {
+                return (
+                    <div>
+                    < TopBar mainTitle={this.state.mainTitle} />
+                    <h1> Codeclan graduate with a special interest in Front End. Enjoys React and SCSS particularily.    </h1>
+                    < BoxContainer />
+                    </div>
+                )
+            } else {
+                return (
+                     <div>       
+                     <Splash splashClicked={this.toggleContent} />
+                     </div>
+                )
+            }
     }
+
+    toggleContent() {
+        this.setState({displayMainContent: true})
+    }
+
+    
+
+
 
 
  render() {
-     return(
+
+     return(  
         <div>
-            <Splash splashClicked={this.removeSplash}/>
-            < TopBar mainTitle={this.state.mainTitle} />
-            <h1> Codeclan graduate with a special interest in Front End. Enjoys React and SCSS particularily.    </h1>
-
-                < BoxContainer />
-            </div>
-
-        
-
+             {this.renderContent() || this.toggleContent()}
+           
+         </div>
      )
  }
 
