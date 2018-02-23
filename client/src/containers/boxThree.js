@@ -6,7 +6,7 @@ class BoxThree extends React.Component {
     render() {
         return (
             <div 
-                onClick={this.props.actionBoxThree}>
+                onClick={this.props.action}>
                 <h1>Box Three</h1>
             </div>
         )
