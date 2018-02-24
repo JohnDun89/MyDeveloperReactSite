@@ -2,6 +2,7 @@ import React from 'react';
 import TopBar from './topBar.js';
 import BoxContainer from './boxContainer.js';
 import Splash from './splash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 class HomePageContainer extends React.Component {
@@ -20,6 +21,11 @@ class HomePageContainer extends React.Component {
     }
 
     renderContent() {
+        const splash = [1].map((number) =>
+            <div key={number.toString()}>
+                <Splash splashClicked={this.toggleContent} introText={this.state.introText} />
+            </div>)
+
             if (this.state.displayMainContent === true) {
                 return (
                     <div>
@@ -30,8 +36,15 @@ class HomePageContainer extends React.Component {
                 )
             } else {
                 return (
-                     <div>       
-                     <Splash splashClicked={this.toggleContent} introText={this.state.introText} />
+                     <div> 
+                        <ReactCSSTransitionGroup
+                            transitionName="splash"
+                            transitionLeave={true}
+                            transitionLeaveTimeout={1000}>
+
+                        {splash}                    
+
+                    </ReactCSSTransitionGroup>
                      </div>
                 )
             }

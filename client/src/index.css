@@ -73,7 +73,14 @@ body {
 
 .introduction-appear.introduction-appear-active {
   opacity: 1;
-  transition: opacity .5s ease-in; }
+  transition: opacity 1.5s ease-in; }
+
+.splash-leave {
+  opacity: 1; }
+
+.splash-leave.splash-leave-active {
+  opacity: 0.01;
+  transition: opacity 1s ease-in; }
 
 #name-animation {
   font-size: 100px; }
