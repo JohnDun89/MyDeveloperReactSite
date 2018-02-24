@@ -92,12 +92,15 @@ body {
   height: 100%;
 }
 
-.job-appear {
+.introduction-appear {
   opacity: 0.01;
 }
 
-.job-enter.job-enter-active {
+.introduction-appear.introduction-appear-active {
   opacity: 1;
-  transition: opacity 2000ms ease-in;
+  transition: opacity .5s ease-in;
 }
 
+#name-animation{
+  font-size: 100px;
+}

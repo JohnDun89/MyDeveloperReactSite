@@ -8,6 +8,11 @@ class Splash extends React.Component {
     }
 
     render() { 
+        const description = this.props.introText.map((number) => 
+    <h2 key={number.toString()}>
+        {number}
+        </h2>
+        );
         return (
             <div id="splash-box" onClick={this.props.splashClicked}>
                 <div>
@@ -19,10 +24,13 @@ class Splash extends React.Component {
                 <div>
                     {/* to use this the item must have a key .  */}
                     <ReactCSSTransitionGroup
-                        transitionName="job"
-                        transitionEnterTimeout={300}
-                        transitionLeaveTimeout={300}>
-                        <h2 >Full stack Developer. </h2>
+                        transitionName="introduction"
+                        transitionAppear={true}
+                        transitionAppearTimeout={500}
+                        transitionEnter={false}
+                        transitionLeave={false}>
+                        <h1>hello</h1>
+                       {description}
                     </ReactCSSTransitionGroup>
                 </div>
             </div>

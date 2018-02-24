@@ -20,13 +20,13 @@ class BoxContainer extends React.Component {
             BoxThree: true
         }
 
-        this.closeClickedOnCv = this.closeClickedOnCv.bind(this)
-        this.toggleBoxTwo = this.toggleBoxTwo.bind(this)
-        this.toggleBoxThree = this.toggleBoxThree.bind(this)
+        this.toggleBoxOneState = this.toggleBoxOneState.bind(this)
+        this.toggleBoxTwoState = this.toggleBoxTwoState.bind(this)
+        this.toggleBoxThreeState = this.toggleBoxThreeState.bind(this)
     }
 
     renderToggle(Component1, Component2, StateBoolean, toggleFunction) {
-        console.log(Component1,Component2,StateBoolean, toggleFunction)
+        console.log(Component1,Component2, StateBoolean, toggleFunction)
         if (StateBoolean === true) {
             return (
                 <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
@@ -44,15 +44,15 @@ class BoxContainer extends React.Component {
         }
     }
 
-    closeClickedOnCv() {
+    toggleBoxOneState() {
         this.setState({ BoxOne: !this.state.BoxOne })
     }
 
-    toggleBoxTwo() {
+    toggleBoxTwoState() {
         this.setState({ BoxTwo: !this.state.BoxTwo })
     }
 
-    toggleBoxThree() {
+    toggleBoxThreeState() {
         this.setState({ BoxThree: !this.state.BoxThree })
     }
 
@@ -60,9 +60,9 @@ class BoxContainer extends React.Component {
         return (
             
             <div className="flex-parent-main">  
-            {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.closeClickedOnCv)} 
-            {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwo)}
-            {this.renderToggle(BoxThree,LinksToTwitterAndGit, this.state.BoxThree, this.toggleBoxThree)}       
+            {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.toggleBoxOneState)} 
+            {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState)}
+            {this.renderToggle(BoxThree,LinksToTwitterAndGit, this.state.BoxThree, this.toggleBoxThreeState)}       
             <BoxFour />
             </div>
         )
