@@ -113,3 +113,7 @@ body {
 #name-animation{
   font-size: 100px;
 }
+
+#animation-container{
+ @include fixed-height-and-width(800px, 1000px); 
+}

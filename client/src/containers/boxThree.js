@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class BoxThree extends React.Component {
 
@@ -6,8 +6,10 @@ class BoxThree extends React.Component {
     render() {
         return (
             <div 
+            
                 onClick={this.props.action}>
-                <h1>Box Three</h1>
+
+                <h1 >Box Three</h1>
             </div>
         )
     }

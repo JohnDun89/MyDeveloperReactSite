@@ -84,3 +84,7 @@ body {
 
 #name-animation {
   font-size: 100px; }
+
+#animation-container {
+  height: 800px;
+  width: 1000px; }

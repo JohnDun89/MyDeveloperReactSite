@@ -22,6 +22,9 @@ class LinksToTwitterAndGit extends React.Component {
                 <div className="button-container">
                     <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                 </div>
+                <div id="animation-container">
+                    <img src="./assets/foreground.jpg" />
+                </div>
                
                 <p>This will contain links to my twitter and git hub</p>
 
