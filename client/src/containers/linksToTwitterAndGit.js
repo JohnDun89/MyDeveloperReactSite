@@ -1,6 +1,7 @@
 
 import React from 'react';
 import BackButton from './backButton.js'
+import Tilt from 'react-tilt'
 
 class LinksToTwitterAndGit extends React.Component {
 
@@ -23,7 +24,10 @@ class LinksToTwitterAndGit extends React.Component {
                     <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                 </div>
                 <div id="animation-container">
+                    <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
+
                     <img src="./assets/foreground.jpg" />
+                    </Tilt>
                 </div>
                
                 <p>This will contain links to my twitter and git hub</p>

@@ -69,11 +69,11 @@ body {
   height: 100%; }
 
 .introduction-appear {
-  opacity: 0.01; }
+  transform: translate3d(0, 100%, 0); }
 
 .introduction-appear.introduction-appear-active {
-  opacity: 1;
-  transition: opacity 1.5s ease-in; }
+  transform: translate3d(0, 0, 0);
+  transition: transform 1.5s ease-in-out; }
 
 .splash-leave {
   opacity: 1; }
@@ -88,3 +88,10 @@ body {
 #animation-container {
   height: 800px;
   width: 1000px; }
+
+.main-animation-appear {
+  transform: translate(100%); }
+
+.main-animation-appear.main-animation-appear-active {
+  transform: translate(0%);
+  transition: transform 1.5s ease-in-out; }

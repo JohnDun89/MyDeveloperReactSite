@@ -28,11 +28,19 @@ class HomePageContainer extends React.Component {
 
             if (this.state.displayMainContent === true) {
                 return (
+                    <ReactCSSTransitionGroup
+                        transitionEnter={true}
+                        transitionName="introduction"
+                        transitionAppear={true}
+                        transitionAppearTimeout={1500}
+                        >
+
                     <div>
                     < TopBar mainTitle={this.state.mainTitle} />
                     <h1> Codeclan graduate with a special interest in Front End. Enjoys React and SCSS particularily.    </h1>
                     < BoxContainer />
                     </div>
+                     </ReactCSSTransitionGroup >
                 )
             } else {
                 return (
@@ -43,7 +51,6 @@ class HomePageContainer extends React.Component {
                             transitionLeaveTimeout={1000}>
 
                         {splash}                    
-
                     </ReactCSSTransitionGroup>
                      </div>
                 )
