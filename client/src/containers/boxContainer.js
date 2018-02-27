@@ -7,6 +7,7 @@ import Cv from './cv.js'
 import WebGl from './webGl.js'
 import Animation from './animation.js'
 import Tilt from 'react-tilt'
+import Github from './github.js'
 
 
 class BoxContainer extends React.Component {
@@ -17,12 +18,14 @@ class BoxContainer extends React.Component {
 
             BoxOne: true,
             BoxTwo: true,
-            BoxThree: true
+            BoxThree: true,
+            BoxFour: true
         }
 
         this.toggleBoxOneState = this.toggleBoxOneState.bind(this)
         this.toggleBoxTwoState = this.toggleBoxTwoState.bind(this)
         this.toggleBoxThreeState = this.toggleBoxThreeState.bind(this)
+        this.toggleBoxFourState = this.toggleBoxFourState.bind(this)
     }
 
     renderToggle(Component1, Component2, StateBoolean, toggleFunction) {
@@ -56,14 +59,19 @@ class BoxContainer extends React.Component {
         this.setState({ BoxThree: !this.state.BoxThree })
     }
 
+    toggleBoxFourState() {
+        this.setState({ BoxFour: !this.state.BoxFour })
+    }
+
     render() {
         return (
             
             <div className="flex-parent-main">  
             {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.toggleBoxOneState)} 
             {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState)}
-            {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState)}       
-            <BoxFour />
+            {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState)}  
+            {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState)}     
+            
             </div>
         )
     }
