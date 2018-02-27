@@ -1,11 +1,25 @@
 
 $main-font: 'Cormorant', serif;
-$tomato: #FFFFFF;
+$white: rgba(255, 255, 255, 0.94);
 $blue: #271DAD;
 
 %small-padding {
     margin: 2%;
   padding: 5px;
+}
+
+@mixin fixed-height-and-width($height, $width) {
+  height: $height ;
+  width: $width ;
+}
+
+%box {
+    @extend %small-padding;
+    @include fixed-height-and-width(400px, 550px);
+    flex: 0 auto;
+    background-color: $white;
+    text-align: left;
+    
 }
 
 @mixin flex-basics($direction) {
@@ -17,10 +31,7 @@ $blue: #271DAD;
   flex-flow: row wrap;
 }
 
-@mixin fixed-height-and-width($height, $width) {
-  height: $height ;
-  width: $width ;
-}
+
 
 body {
   font-family: $main-font;
@@ -37,22 +48,94 @@ body {
   flex-wrap: 2;
 }
 
-.box {
-  @extend %small-padding;
-  @include fixed-height-and-width(400px, 550px);
-  flex: 0 auto;
-  background-color: $tomato;
+.box-one{
+  -webkit-transition:0.5s;
+  @extend %box;
   border: #271DAD;
   border-style: solid;
   border-left-style: hidden;
-  border-radius: 4px;
+  border-top-style: hidden;
+  border-bottom-right-radius: 7px;
+  transition: 0.5s;
+              
+}
+
+.box-one::before, .box-one::after{
+    width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  transition: 0.5s;
+}
+
+.draw-corner::before{
+  border-left: 3px solid $blue;
+  border-top: 3px solid $blue ;
+  -webkit-transform-origin: left top;
+}
+
+.draw-corner::after{
+   border-top: 3px solid $blue;
+  border-left: 3px solid $blue;
+  -webkit-transform-origin: left top;
+}
+
+.box-one:hover::after, .box-one:hover::before {
+  -webkit-transform: scale(.99);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#box-two{
+  @extend %box;
+}
+
+#box-three{
+  transition: background-color .5s ease-in-out;
+  @extend %box;
+  border: $blue;
+  color: $blue;
+  border-style: solid;
+  border-radius: 5px;
+
+
+
+}
+
+#box-three:hover{
+  color: $white;
+  background-color: $blue;
+}
+
+#box-four{
+  @extend %box;
+  border: $blue;
+  border-style: solid;
 }
 
 .box:hover {
-    @extend %small-padding;
+  @extend %small-padding;
   @include fixed-height-and-width(400px, 550px);
   flex: 0 auto;
-  background-color: $tomato;
+  background-color: $white;
   border: $blue;
   border-style: solid;
   border-left-style: solid;
@@ -61,7 +144,7 @@ body {
 
 .expanded-content {
   @extend %small-padding;
-  background-color: $tomato;
+  background-color: $white;
 }
 
 .button-container {
@@ -99,7 +182,7 @@ body {
 #splash-box{
   text-align: center;
   align-content: center;
-  color: #fff;
+  color: $white;
   background-color: #5DA889;
   position: fixed;
   width: 100%;
@@ -116,14 +199,11 @@ body {
 }
 
 
-
 #name-animation{
   font-size: 100px;
 }
 
-#animation-container{
- @include fixed-height-and-width(800px, 1000px); 
-}
+
 
 .image {
   position: absolute;
@@ -142,9 +222,28 @@ body {
 }
 
 .main-image{
-  background: url("sketch-01.png")
+  transition: background .5s ease-in-out;
+  background: url("sketch-01.png");
 }
 
 .main-image:hover{
   background: url("blenderimage-01.png")
+}
+
+#web-gl-title{
+  position: absolute;
+  color: $white;
+  text-align: bottom;
+  font-size: 160px;
+}
+
+#animation-title{
+  position: absolute;
+
+  text-align: bottom;
+  font-size: 120px;
+}
+
+#animation-container{
+ @include fixed-height-and-width(800px, 1000px); 
 }

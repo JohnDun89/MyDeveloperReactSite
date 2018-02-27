@@ -6,9 +6,9 @@ class BoxTwo extends React.Component {
     render() {
         return (
           
-            <div className="main-image box"  onClick={this.props.action}>
+            <div className="main-image" id="box-two" onClick={this.props.action}>
                 <div >
- 
+                <h1 id="web-gl-title">Web-GL</h1>
                 
                 </div>
             </div>
@@ -17,6 +17,3 @@ class BoxTwo extends React.Component {
 }
 
 export default BoxTwo;
-
-{/* <img
-    src="./assets/sketch-01.png" /> */}
