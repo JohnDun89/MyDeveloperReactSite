@@ -17,9 +17,9 @@ class Splash extends React.Component {
                     <ReactCSSTransitionGroup
                         transitionName="introduction"
                         transitionAppear={true}
+                        transitionEnterTimeout={1500}
                         transitionAppearTimeout={1500}
-                        transitionEnter={false}
-                        transitionLeave={false}>
+                        transitionLeaveTimeout={1500}>
                         
                        {description}
                     </ReactCSSTransitionGroup>

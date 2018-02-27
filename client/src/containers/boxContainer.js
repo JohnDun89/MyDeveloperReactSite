@@ -39,8 +39,8 @@ class BoxContainer extends React.Component {
                             transitionName="main-react-transition"
                             transitionAppear={true}
                             transitionAppearTimeout={1000}
-                            transitionLeave={true}
-                            transitionLeaveTimeout={1000}>
+                            transitionLeaveTimeout={1000}
+                            transitionEnterTimeout={1000}>
                         <Component1 action={toggleFunction} />
                         </ReactCSSTransitionGroup>
                     </div>
@@ -53,8 +53,8 @@ class BoxContainer extends React.Component {
                         transitionName="main-react-transition"
                         transitionAppear={true}
                         transitionAppearTimeout={1000}
-                        transitionLeave={true}
-                        transitionLeaveTimeout={1000}>
+                        transitionLeaveTimeout={1000}
+                        transitionEnterTimeout={1000}>
                     <Component2 close={toggleFunction || StateBoolean} />
                     </ReactCSSTransitionGroup>
                 </div>

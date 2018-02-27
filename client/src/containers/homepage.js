@@ -33,6 +33,9 @@ class HomePageContainer extends React.Component {
                         transitionName="introduction"
                         transitionAppear={true}
                         transitionAppearTimeout={1500}
+
+                        transitionLeaveTimeout={1500}
+                        transitionEnterTimeout={1500}
                         >
 
                     <div>

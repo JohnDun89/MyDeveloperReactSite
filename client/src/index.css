@@ -28,6 +28,7 @@ body {
   flex-wrap: 2; }
 
 .box-one {
+  z-index: -1;
   -webkit-transition: 0.5s;
   border: #271DAD;
   border-style: solid;
@@ -37,6 +38,7 @@ body {
   transition: 0.5s; }
 
 .box-one::before, .box-one::after {
+  z-index: -1;
   width: 100%;
   height: 100%;
   z-index: 3;
@@ -62,6 +64,9 @@ body {
 
 .box-one:hover::after, .box-one:hover::before {
   -webkit-transform: scale(0.99); }
+
+#box-two {
+  z-index: -1; }
 
 #web-gl-box {
   height: 800px;
@@ -130,7 +135,8 @@ body {
   background-color: #271DAD; }
 
 .expanded-content {
-  background-color: rgba(255, 255, 255, 0.94); }
+  background-color: rgba(255, 255, 255, 0.94);
+  z-index: -1; }
 
 .button-container {
   display: flex;
@@ -167,3 +173,10 @@ body {
 .main-react-transition-appear.main-react-transition-appear-active {
   transform: translate3d(0, 0, 0);
   transition: transform 1s ease-in-out; }
+
+.main-react-transition-leave {
+  opacity: 1; }
+
+.main-react-transition-leave.main-react-transition-leave-active {
+  opacity: 0.01;
+  transition: opacity 1s ease-in; }
