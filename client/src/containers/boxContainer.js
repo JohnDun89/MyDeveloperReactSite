@@ -16,7 +16,6 @@ class BoxContainer extends React.Component {
         super(props) 
 
         this.state = {
-
             BoxOne: true,
             BoxTwo: true,
             BoxThree: true,

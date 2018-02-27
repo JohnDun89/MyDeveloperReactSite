@@ -47,7 +47,6 @@ body {
   flex-wrap: 2;
 }
 
-
 // ---------------------------------------------------C.V.------------------------------------//
 .box-one{
   z-index: -1;
@@ -106,7 +105,10 @@ body {
   @extend %small-padding;
   @include fixed-height-and-width(800px, 1000px);
   @include flex-basics(colum);
-  background-color: teal;
+  background-color: $white;
+  border: $blue;
+  border-style: solid;
+  
   margin: 5px;
 }
 
@@ -236,9 +238,11 @@ body {
 
 .main-react-transition-leave{
   opacity: 1;
+
 }
 
 .main-react-transition-leave.main-react-transition-leave-active {
+
   opacity: 0.01;
   transition: opacity 1s ease-in;
 }
