@@ -5,8 +5,8 @@ class BoxFour extends React.Component {
 
     render() {
         return (
-            <div id="box-four">
-                <h1>Box Four</h1>
+            <div id="box-four" >
+                <h1>GitHub</h1>
             </div>
         )
     }

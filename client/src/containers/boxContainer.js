@@ -5,7 +5,7 @@ import BoxThree from './boxThree.js'
 import BoxFour from './boxFour.js'
 import Cv from './cv.js'
 import WebGl from './webGl.js'
-import LinksToTwitterAndGit from './linksToTwitterAndGit.js'
+import Animation from './animation.js'
 import Tilt from 'react-tilt'
 
 
@@ -62,7 +62,7 @@ class BoxContainer extends React.Component {
             <div className="flex-parent-main">  
             {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.toggleBoxOneState)} 
             {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState)}
-            {this.renderToggle(BoxThree,LinksToTwitterAndGit, this.state.BoxThree, this.toggleBoxThreeState)}       
+            {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState)}       
             <BoxFour />
             </div>
         )
