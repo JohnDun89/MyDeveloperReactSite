@@ -44,15 +44,9 @@ class HomePageContainer extends React.Component {
                 )
             } else {
                 return (
-                     <div> 
-                        <ReactCSSTransitionGroup
-                            transitionName="splash"
-                            transitionLeave={true}
-                            transitionLeaveTimeout={1000}>
-
-                        {splash}                    
-                    </ReactCSSTransitionGroup>
-                     </div>
+                        <div>
+                        {splash}
+                        </div>                     
                 )
             }
     }

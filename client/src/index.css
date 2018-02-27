@@ -1,4 +1,4 @@
-.box, .expanded-content, #web-gl-box, .tilt {
+.box, .box:hover, .expanded-content, #web-gl-box, .tilt {
   margin: 2%;
   padding: 5px; }
 
@@ -6,7 +6,7 @@ body {
   font-family: "Cormorant", serif; }
 
 #nav-bar {
-  background-color: blue;
+  background-color: #271DAD;
   height: 100px;
   z-index: 1; }
 
@@ -17,7 +17,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-flow: row wrap;
-  background-color: blanchedalmond;
   width: 100%;
   flex-wrap: 2; }
 
@@ -25,10 +24,24 @@ body {
   height: 400px;
   width: 550px;
   flex: 0 auto;
-  background-color: tomato; }
+  background-color: #FFFFFF;
+  border: #271DAD;
+  border-style: solid;
+  border-left-style: hidden;
+  border-radius: 4px; }
+
+.box:hover {
+  height: 400px;
+  width: 550px;
+  flex: 0 auto;
+  background-color: #FFFFFF;
+  border: #271DAD;
+  border-style: solid;
+  border-left-style: solid;
+  border-radius: 4px; }
 
 .expanded-content {
-  background-color: tomato; }
+  background-color: #FFFFFF; }
 
 .button-container {
   display: flex;
@@ -38,7 +51,7 @@ body {
   font-family: "Cormorant", serif;
   font-size: 170px;
   font-weight: bold;
-  color: blanchedalmond; }
+  color: #271DAD; }
 
 #web-gl-box {
   height: 800px;
@@ -75,13 +88,6 @@ body {
   transform: translate3d(0, 0, 0);
   transition: transform 1.5s ease-in-out; }
 
-.splash-leave {
-  opacity: 1; }
-
-.splash-leave.splash-leave-active {
-  opacity: 0.01;
-  transition: opacity 1s ease-in; }
-
 #name-animation {
   font-size: 100px; }
 
@@ -89,9 +95,11 @@ body {
   height: 800px;
   width: 1000px; }
 
-.main-animation-appear {
-  transform: translate(100%); }
+.image {
+  position: absolute; }
 
-.main-animation-appear.main-animation-appear-active {
-  transform: translate(0%);
-  transition: transform 1.5s ease-in-out; }
+.main-image {
+  background: url("sketch-01.png"); }
+
+.main-image:hover {
+  background: url("blenderimage-01.png"); }

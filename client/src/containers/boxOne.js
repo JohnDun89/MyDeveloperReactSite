@@ -26,7 +26,7 @@ class BoxOne extends React.Component {
 
     render() {
         return (
-            <div 
+            <div className="box"
                 onClick={this.props.action} >
                 <h1 className="hero-text">C.V.</h1>
             </div>

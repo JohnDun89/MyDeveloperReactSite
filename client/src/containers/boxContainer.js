@@ -30,7 +30,7 @@ class BoxContainer extends React.Component {
         if (StateBoolean === true) {
             return (
                 <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
-                    <div className="box">
+                    <div >
                         <Component1 action={toggleFunction} />
                     </div>
                 </Tilt>

@@ -1,6 +1,7 @@
 
 $main-font: 'Cormorant', serif;
-$tomato: tomato;
+$tomato: #FFFFFF;
+$blue: #271DAD;
 
 %small-padding {
     margin: 2%;
@@ -26,15 +27,13 @@ body {
 }
 
 #nav-bar{
-  background-color: blue;
+  background-color: $blue;
   height: 100px;
   z-index: 1;
 }
 
 .flex-parent-main{
-  @include flex-basics(row);
-  background-color: blanchedalmond;
-  width: 100%;
+  @include flex-basics(row);  width: 100%;
   flex-wrap: 2;
 }
 
@@ -43,6 +42,21 @@ body {
   @include fixed-height-and-width(400px, 550px);
   flex: 0 auto;
   background-color: $tomato;
+  border: #271DAD;
+  border-style: solid;
+  border-left-style: hidden;
+  border-radius: 4px;
+}
+
+.box:hover {
+    @extend %small-padding;
+  @include fixed-height-and-width(400px, 550px);
+  flex: 0 auto;
+  background-color: $tomato;
+  border: $blue;
+  border-style: solid;
+  border-left-style: solid;
+  border-radius: 4px;
 }
 
 .expanded-content {
@@ -59,7 +73,7 @@ body {
   font-family: $main-font;
   font-size: 170px;
   font-weight: bold;
-  color: blanchedalmond;
+  color: $blue;
 }
 
 #web-gl-box {
@@ -101,14 +115,7 @@ body {
   transition: transform 1.5s ease-in-out;
 }
 
-.splash-leave {
-  opacity: 1;
-}
 
-.splash-leave.splash-leave-active {
-  opacity: 0.01;
-  transition: opacity 1s ease-in;
-}
 
 #name-animation{
   font-size: 100px;
@@ -118,11 +125,26 @@ body {
  @include fixed-height-and-width(800px, 1000px); 
 }
 
-.main-animation-appear {
-  transform: translate(100%);
+.image {
+  position: absolute;
 }
 
-.main-animation-appear.main-animation-appear-active {
-  transform: translate(0%);
-  transition: transform 1.5s ease-in-out;
+#image-front{
+
+}
+
+#image-mid{
+
+}
+
+#image-back{
+
+}
+
+.main-image{
+  background: url("sketch-01.png")
+}
+
+.main-image:hover{
+  background: url("blenderimage-01.png")
 }
