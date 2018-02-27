@@ -6,7 +6,7 @@ class Splash extends React.Component {
 
     render() { 
         const description = this.props.introText.map((number) => 
-            <h2 key={number.toString()} Animated class="animated fadeInUp " id="name-animation">
+            <h2 key={number.toString()} class="animated fadeInUp " id="name-animation">
         {number}
         </h2>
         );

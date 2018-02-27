@@ -161,12 +161,17 @@ body {
 // ---------------------------------------------------GitHub------------------------------------//
 
 #box-four{
+  transition: background-color .5s ease-in-out;
   @extend %box;
   border: $blue;
   color: $blue;
   border-style: solid;
   font-size: 50px;
-  
+}
+
+#box-four:hover{
+  color: $white;
+  background-color: $blue;
 }
 
 .expanded-content {
@@ -213,6 +218,14 @@ body {
   font-size: 100px;
 }
 
+.main-react-transition-appear {
+ transform: translate3d(0, 100%, 0)
+}
+
+.main-react-transition-appear.main-react-transition-appear-active {
+    transform: translate3d(0, 0, 0);
+  transition: transform 1s ease-in-out;
+}
 
 
 

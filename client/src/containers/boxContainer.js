@@ -8,6 +8,7 @@ import WebGl from './webGl.js'
 import Animation from './animation.js'
 import Tilt from 'react-tilt'
 import Github from './github.js'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 class BoxContainer extends React.Component {
@@ -34,14 +35,28 @@ class BoxContainer extends React.Component {
             return (
                 <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true }}>
                     <div >
+                        <ReactCSSTransitionGroup
+                            transitionName="main-react-transition"
+                            transitionAppear={true}
+                            transitionAppearTimeout={1000}
+                            transitionLeave={true}
+                            transitionLeaveTimeout={1000}>
                         <Component1 action={toggleFunction} />
+                        </ReactCSSTransitionGroup>
                     </div>
                 </Tilt>
             )
         } else {
             return (
                 <div >
+                    <ReactCSSTransitionGroup
+                        transitionName="main-react-transition"
+                        transitionAppear={true}
+                        transitionAppearTimeout={1000}
+                        transitionLeave={true}
+                        transitionLeaveTimeout={1000}>
                     <Component2 close={toggleFunction || StateBoolean} />
+                    </ReactCSSTransitionGroup>
                 </div>
             )
         }

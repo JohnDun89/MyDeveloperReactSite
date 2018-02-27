@@ -119,10 +119,15 @@ body {
   position: absolute; }
 
 #box-four {
+  transition: background-color .5s ease-in-out;
   border: #271DAD;
   color: #271DAD;
   border-style: solid;
   font-size: 50px; }
+
+#box-four:hover {
+  color: rgba(255, 255, 255, 0.94);
+  background-color: #271DAD; }
 
 .expanded-content {
   background-color: rgba(255, 255, 255, 0.94); }
@@ -155,3 +160,10 @@ body {
 
 #name-animation {
   font-size: 100px; }
+
+.main-react-transition-appear {
+  transform: translate3d(0, 100%, 0); }
+
+.main-react-transition-appear.main-react-transition-appear-active {
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s ease-in-out; }
