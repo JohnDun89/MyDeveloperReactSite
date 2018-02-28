@@ -20,10 +20,8 @@ class Animation extends React.Component {
                     <img id="image-back" className="image" src="./assets/MidGround-01.png"/>
                     <img id="image-mid" className="image" src="./assets/FrontMidground-01.png" />
                     <img id="image-front" className="image" src="./assets/ForeGround-01.png" />                 
-                </div>
-               
+                </div>      
                 <p>This will contain links to my twitter and git hub</p>
-
             </div>
 
         )

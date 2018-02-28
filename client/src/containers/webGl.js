@@ -119,7 +119,6 @@ class WebGl extends React.Component {
         }
 }
 }
-
 export default WebGl;
 
 
