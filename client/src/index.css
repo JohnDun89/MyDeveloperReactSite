@@ -1,4 +1,4 @@
-.box-one, #box-two, #box-three, #box-four, #web-gl-box, .expanded-content, .tilt {
+.box-one, #box-two, #box-three, #box-four, #web-gl-box, .expanded-content, .expanded-content-links, .tilt {
   margin: 2%;
   padding: 5px; }
 
@@ -154,8 +154,13 @@ body {
   margin-top: -10px; }
 
 .expanded-content {
-  background-color: rgba(255, 255, 255, 0.94);
-  z-index: -1; }
+  background-color: rgba(255, 255, 255, 0.94); }
+
+.expanded-content-links {
+  z-index: 1;
+  height: 400px;
+  width: 550px;
+  background-color: rgba(255, 255, 255, 0.94); }
 
 .button-container {
   display: flex;

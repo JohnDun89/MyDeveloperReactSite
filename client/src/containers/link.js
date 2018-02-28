@@ -12,13 +12,15 @@ class Link extends React.Component {
     }
 
     linkClicked() {
+        const link = this.props.text[1]
         console.log("clicked")
+        console.log(link)
+        window.open(link,'__blank')
     }  
 
     render() {
 
         const title = this.props.text[0]
-        const link = this.props.text[1]
         const keywords = this.props.text[2]
         return (
 

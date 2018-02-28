@@ -12,23 +12,16 @@ class Github extends React.Component {
             ReactProject: ['This Site', 'https://github.com/JohnDun89/MyDeveloperReactSite','This site, React, SCSS and WebGl'],
             Pagination: ['Pagination with Game of Thrones API','https://github.com/JohnDun89/Game-0f-Thrones-Christmas-Project','']
         }
-
-        
     }
-
-    ComponentWillMount () {
-
-    }
-   
 
     render() {
 
               
         return (
-            <div className="expanded-content">
+            <div className="expanded-content-links">
                 <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                 <div >
-                    <h1>Links to git hub and specific projects</h1>
+                    <h1>Links To My projects</h1>
                     <Link text={this.state.Github} />
                     <Link text={this.state.Budgeting}/>
                     <Link text={this.state.Cycling}/>

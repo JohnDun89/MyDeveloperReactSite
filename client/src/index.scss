@@ -207,9 +207,17 @@ margin-top: -10px;
 .expanded-content {
   @extend %small-padding;
   background-color: $white;
-    z-index: -1;
-
 }
+
+.expanded-content-links {
+  z-index: 1;
+  @include fixed-height-and-width(400px, 550px);
+  @extend %small-padding;
+  background-color: $white;
+}
+
+
+
 
 .button-container {
   display: flex;
