@@ -136,6 +136,23 @@ body {
   color: rgba(255, 255, 255, 0.94);
   background-color: #271DAD; }
 
+.list-item {
+  border-color: #271DAD;
+  border-style: solid;
+  padding-left: 15px;
+  margin: 2px; }
+
+.list-item:hover {
+  border-color: #FFB52B;
+  border-width: 7px; }
+
+.li-title {
+  font-size: 26px; }
+
+.li-keywords {
+  font-size: 16px;
+  margin-top: -10px; }
+
 .expanded-content {
   background-color: rgba(255, 255, 255, 0.94);
   z-index: -1; }
