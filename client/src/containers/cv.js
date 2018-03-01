@@ -9,8 +9,9 @@ class Cv extends React.Component {
         
 
             <div className="expanded-content">
-                <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                     <div className="expanded-cv">
+                    <button className="back-button" onClick={this.props.close} type="button" >Close</button>
+
                          <div>
                             <h1>John Duncan</h1>
                                 <h2>January 2018 Codeclan graduate, looking for Junior developer opportunities in the technology industry. I  would love to work with Javascript creating robust web content and in the future help with a meaningful open source project.</h2>

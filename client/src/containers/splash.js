@@ -12,7 +12,7 @@ class Splash extends React.Component {
         );
         return (
             <div id="splash-box"  onWheel={this.props.splashClicked}>
-                <div>
+                <div id="splash-text-container">
                     {/* to use this the item must have a key .  */}
                     <ReactCSSTransitionGroup
                         transitionName="introduction"
@@ -22,6 +22,7 @@ class Splash extends React.Component {
                         transitionLeaveTimeout={1500}>
                         
                        {description}
+                       <h2 className="accent">Scroll .</h2>
                     </ReactCSSTransitionGroup>
                 </div>
             </div>

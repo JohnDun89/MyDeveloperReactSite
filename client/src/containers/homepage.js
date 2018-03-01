@@ -3,7 +3,7 @@ import TopBar from './topBar.js';
 import BoxContainer from './boxContainer.js';
 import Splash from './splash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
+import Bio from './bio.js'
 
 class HomePageContainer extends React.Component {
 
@@ -40,7 +40,7 @@ class HomePageContainer extends React.Component {
 
                     <div>
                     < TopBar mainTitle={this.state.mainTitle} />
-                    <h1> Codeclan graduate with a special interest in Front End. Enjoys React and SCSS particularily.    </h1>
+                    < Bio />
                     < BoxContainer />
                     </div>
                      </ReactCSSTransitionGroup >

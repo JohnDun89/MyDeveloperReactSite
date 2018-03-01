@@ -41,13 +41,22 @@ class WebGl extends React.Component {
         
         function initialize() {
 
-            m_app.init({
+          m_app.init({
                 canvas_container_id: 'main_canvas_container',
                 callback: initializeCallback,
                 show_fps: DEBUG,
                 console_verbose: DEBUG,
                 autoresize: true
             });
+        
+            m_data.unload();
+            m_app.init({
+                canvas_container_id: "b4w",
+                callback: initializeCallback,
+                autoresize: true,
+                pause_invisible: true
+            })
+       
         }
 
         function initializeCallback(canvas, success) {
