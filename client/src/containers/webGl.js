@@ -102,13 +102,17 @@ class WebGl extends React.Component {
         if (this.state.BoxTwo === true) {
             return(
             <main>
+                <div>
+                <button className="back-button" onClick={this.props.close} type="button" >Close</button>            
                 <div className="expanded-content" id="web-gl-box">
+                              
+
                     <div className="flex-parent-main">                   
-                    <button className="back-button" onClick={this.props.close} type="button" >Close</button>                   
                     <br/>
                     </div>
                     <p>Left click to rotate, mouse wheel to zoom and right click to move.</p>
                     <div id='main_canvas_container'></div>
+                </div>
                 </div>
             </main>
             )

@@ -48,6 +48,28 @@ body {
   flex-wrap: 2;
 }
 
+.back-button { 
+  font-size: 20px;
+  font-weight: bold;
+  font-family: $main-font;
+  background-color: $blue;
+  color: $white;
+  border: white;
+  margin:15px;
+  // padding: 5px;
+  width: 15%;
+  border-radius: 20px;
+}
+
+.back-button:hover {
+  border: $acent;
+  border-color: $acent;
+  border-width: 4px;
+  border-radius: 20px;
+
+
+}
+
 
 
 // ---------------------------------------------------C.V.------------------------------------//
@@ -66,6 +88,12 @@ body {
 .expanded-cv{
   @include flex-basics(row); 
   width: 700px;
+}
+
+.topline{
+  border-top: solid;
+  border-top-color: $acent;
+  
 }
 
 .box-one::before, .box-one::after{
