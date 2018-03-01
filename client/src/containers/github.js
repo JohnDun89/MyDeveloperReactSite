@@ -6,10 +6,10 @@ class Github extends React.Component {
        super(props)
         this.state ={
             Github: ['GitHub','https://github.com/JohnDun89','All projects and CodeClan Homeworks.'],
-            Budgeting: ['Budgeting App','https://github.com/JohnDun89/budgeting_app','A Budgeting App, built with Ruby, Sinatra, CSS and SQL'],
-            Cycling: ['Cycling Route Finder','https://github.com/JohnDun89/js-group-project','Group Project, using Javascript, NodeJS, MondgoDB and CSS'],
-            ToDo: ['Android To Do List', 'https://github.com/JohnDun89/AndroidToDoList','Android Phone App, Java, Android Studio and SQLite'],
-            ReactProject: ['This Site', 'https://github.com/JohnDun89/MyDeveloperReactSite','This site, React, SCSS and WebGl'],
+            Budgeting: ['Budgeting App','https://github.com/JohnDun89/budgeting_app','A Budgeting App, built with Ruby, Sinatra, CSS and SQL.'],
+            Cycling: ['Cycling Route Finder','https://github.com/JohnDun89/js-group-project','Group Project, using Javascript, NodeJS, MondgoDB and CSS.'],
+            ToDo: ['Android To Do List', 'https://github.com/JohnDun89/AndroidToDoList','Android Phone App, Java, Android Studio and SQLite.'],
+            ReactProject: ['This Site', 'https://github.com/JohnDun89/MyDeveloperReactSite','This site, React, SCSS and WebGl.'],
             Pagination: ['Pagination with Game of Thrones API','https://github.com/JohnDun89/Game-0f-Thrones-Christmas-Project','']
         }
     }

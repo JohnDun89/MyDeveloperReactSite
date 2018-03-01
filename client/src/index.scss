@@ -63,6 +63,11 @@ body {
   transition: 0.5s;           
 }
 
+.expanded-cv{
+  @include flex-basics(row); 
+  width: 700px;
+}
+
 .box-one::before, .box-one::after{
     z-index: -1;
 

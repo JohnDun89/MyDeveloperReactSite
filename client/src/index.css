@@ -37,6 +37,15 @@ body {
   border-bottom-right-radius: 7px;
   transition: 0.5s; }
 
+.expanded-cv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  width: 700px; }
+
 .box-one::before, .box-one::after {
   z-index: -1;
   width: 100%;
