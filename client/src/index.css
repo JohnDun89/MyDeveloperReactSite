@@ -154,7 +154,8 @@ body {
   padding: 5%; }
 
 .image {
-  position: absolute; }
+  position: absolute;
+  overflow: hidden; }
 
 .box-normal-with-hover-transition {
   transition: background-color .5s ease-in-out;
