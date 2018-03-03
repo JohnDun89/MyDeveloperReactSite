@@ -7,8 +7,10 @@ class Code extends React.Component {
 
       
         return (
+            <div className="expanded-content-links">
             <div >
                 Im a code snippet.
+            </div>
             </div>
         )
     }

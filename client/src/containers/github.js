@@ -18,6 +18,7 @@ class Github extends React.Component {
 
               
         return (
+            // this class needs changed so box epands to cover all links
             <div className="expanded-content-links">
                 <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                 <div >
