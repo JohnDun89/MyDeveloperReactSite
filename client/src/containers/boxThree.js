@@ -6,7 +6,7 @@ class BoxThree extends React.Component {
 
     render() {
         return (
-            <div id="box-three">
+            <div className="box-normal-with-hover-transition">
             <div 
                 onClick={this.props.action}>
                 <h1 id="animation-title">Animation </h1>

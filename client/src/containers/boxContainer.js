@@ -3,11 +3,14 @@ import BoxOne from './boxOne.js'
 import BoxTwo from './boxTwo.js'
 import BoxThree from './boxThree.js'
 import BoxFour from './boxFour.js'
+import BoxFive from './boxFive.js'
+import BoxSix from './boxSix.js'
 import Cv from './cv.js'
 import WebGl from './webGl.js'
 import Animation from './animation.js'
 import Tilt from 'react-tilt'
 import Github from './github.js'
+import Code from './code.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
@@ -19,13 +22,15 @@ class BoxContainer extends React.Component {
             BoxOne: true,
             BoxTwo: true,
             BoxThree: true,
-            BoxFour: true
+            BoxFour: true,
+            BoxFive: true
         }
 
         this.toggleBoxOneState = this.toggleBoxOneState.bind(this)
         this.toggleBoxTwoState = this.toggleBoxTwoState.bind(this)
         this.toggleBoxThreeState = this.toggleBoxThreeState.bind(this)
         this.toggleBoxFourState = this.toggleBoxFourState.bind(this)
+        this.toggleBoxFiveState = this.toggleBoxFiveState.bind(this)
     }
 
     renderToggle(Component1, Component2, StateBoolean, toggleFunction) {
@@ -77,6 +82,10 @@ class BoxContainer extends React.Component {
         this.setState({ BoxFour: !this.state.BoxFour })
     }
 
+    toggleBoxFiveState() {
+        this.setState({BoxFive: !this.state.BoxFive})
+    }
+
     render() {
         return (
             
@@ -85,7 +94,7 @@ class BoxContainer extends React.Component {
             {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState)}
             {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState)}  
             {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState)}     
-            
+            {this.renderToggle(BoxFive, Code, this.state.BoxFive, this.toggleBoxFiveState)}
             </div>
         )
     }
