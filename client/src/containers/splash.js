@@ -22,7 +22,7 @@ class Splash extends React.Component {
                         transitionLeaveTimeout={1500}>
                         
                        {description}
-                       <h2 className="accent">Scroll .</h2>
+                       <h2 className="accent">Scroll</h2>
                     </ReactCSSTransitionGroup>
                 </div>
             </div>

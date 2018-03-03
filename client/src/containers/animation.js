@@ -2,7 +2,7 @@
 import React from 'react';
 import BackButton from './backButton.js'
 import Tilt from 'react-tilt'
-
+import Hover from './hover-pan.js'
 class Animation extends React.Component {
 
     constructor(props) {
