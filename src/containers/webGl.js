@@ -3,9 +3,6 @@ import b4w from "blend4web";
 
 
 class WebGl extends React.Component {
-
-
-
     constructor(props) {
         super(props)
         this.state = {
@@ -13,10 +10,7 @@ class WebGl extends React.Component {
         }
     }
 
-    
-
     // the component needs to change the scale fo the div rpior to mount. as right now it mounts with no content
-
 
     componentWillMount() {
         console.log(this.state.BoxTwo)
@@ -40,7 +34,6 @@ class WebGl extends React.Component {
         var APP_ASSETS_PATH = m_cfg.get_assets_path();
         
         function initialize() {
-
           m_app.init({
                 canvas_container_id: 'main_canvas_container',
                 callback: initializeCallback,
@@ -48,31 +41,26 @@ class WebGl extends React.Component {
                 console_verbose: DEBUG,
                 autoresize: true
             });
-            m_data.unload();
-           
+            m_data.unload();           
         }
 
         function initializeCallback(canvas, success) {
-
             if (!success) {
                 console.log("b4w init failure");
                 return;
             }
-
             m_preloader.create_preloader();
-            // ignore right-click on the canvas element
             canvas.oncontextmenu = function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 return false;
             };
-
             load();
         }
 
 
         function load() {
-            m_data.load(APP_ASSETS_PATH + "dinburgh.json", loadCallback, preloaderForCallback);
+            m_data.load(APP_ASSETS_PATH + "dinburghblack.json", loadCallback, preloaderForCallback);
         }
 
         function preloaderForCallback(percentage) {
@@ -80,12 +68,10 @@ class WebGl extends React.Component {
         }
 
         function loadCallback(data_id, success) {
-
             if (!success) {
                 console.log("b4w load failure");
                 return;
             }
-
             m_app.enable_camera_controls();
 
         }
