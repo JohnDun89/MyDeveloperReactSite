@@ -7,9 +7,6 @@ class Bio extends React.Component {
 
         console.log(this.props.mainTitle)
 
-
-        const title = this.props.mainTitle
-
         return (
             <div id="bio">
                 <div id="contact details">
@@ -17,7 +14,7 @@ class Bio extends React.Component {
                 <h1>john@johnduncanphoto.com</h1>
                 </div>
                 <div>
-                    <p id="bio-text">Codeclan graduate seeking full stack Developer Jobs with a particular interest in React, NodeJS, SCSS and 3D in browser.</p>
+                    <p id="bio-text">Codeclan graduate seeking Developer Jobs with a particular interest in React, NodeJS, Front End, SCSS and 3D in browser.</p>
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import BackButton from './backButton.js'
+
 
 class Cv extends React.Component {
 
@@ -8,7 +8,7 @@ class Cv extends React.Component {
         return (
         
 
-            <div className="expanded-content">
+            <div className="expanded-content expanded-padding">
                     <div className="expanded-cv">
                     <button className="back-button" onClick={this.props.close} type="button" >Close</button>
 

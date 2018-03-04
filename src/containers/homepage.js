@@ -14,7 +14,7 @@ class HomePageContainer extends React.Component {
         this.state = {
         displayMainContent: false,
         mainTitle: ['John Duncan, Junior Developer'],
-        introText: ['John Duncan', 'Junior Full Stack Developer']
+        introText: ['John Duncan', 'Junior Developer']
         }
         this.toggleContent = this.toggleContent.bind(this) 
         this.renderContent = this.renderContent.bind(this)

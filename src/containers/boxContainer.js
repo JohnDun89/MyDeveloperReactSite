@@ -102,13 +102,14 @@ class BoxContainer extends React.Component {
 
     render() {
         return (
-            
-            <div className="flex-parent-main">  
-            {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.toggleBoxOneState, this.transition)} 
-            {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState, this.transition)}
-            {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState, this.transition)}  
-            {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState, this.transition)}     
-            {this.renderToggle(BoxFive, Code, this.state.BoxFive, this.toggleBoxFiveState, this.transition)}
+            <div className="flex-parent-master" >
+                <div className="flex-parent-main">  
+                    {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.toggleBoxOneState, this.transition)} 
+                    {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState, this.transition)}
+                    {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState, this.transition)}  
+                    {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState, this.transition)}     
+                    {this.renderToggle(BoxFive, Code, this.state.BoxFive, this.toggleBoxFiveState, this.transition)}
+                </div>
             </div>
         )
     }

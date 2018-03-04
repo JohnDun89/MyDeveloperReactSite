@@ -26,7 +26,7 @@ class Animation extends React.Component {
 
             const { x, y } = this.state;
         return (
-            <div className="expanded-content" ref="elem">
+            <div className="expanded-content expanded-padding" ref="elem">
                 <div className="button-container">
                     <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                     
