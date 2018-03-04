@@ -1,4 +1,4 @@
-.box-one, #box-two, .box-normal-with-hover-transition, #bio, #web-gl-box, .expanded-content-links, .tilt {
+.box-one, #box-two, .box-normal-with-hover-transition, .flex-parent-main, #bio, #web-gl-box, .expanded-content-links, .tilt {
   margin: 2%;
   padding: 5px; }
 
@@ -23,8 +23,8 @@ body {
 .flex-parent-main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: top;
+  justify-content: top;
   flex-wrap: wrap;
   flex-flow: row wrap;
   width: 100%;
@@ -115,8 +115,8 @@ body {
   width: 1000px;
   display: flex;
   flex-direction: colum;
-  align-items: center;
-  justify-content: center;
+  align-items: top;
+  justify-content: top;
   flex-wrap: wrap;
   flex-flow: row wrap;
   background-color: #ECEEE4;

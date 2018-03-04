@@ -29,8 +29,8 @@ $acent: #F5CE41;
 @mixin flex-basics($direction) {
   display: flex;
   flex-direction: $direction;
-  align-items: center;
-  justify-content: center;
+  align-items: top;
+  justify-content: top;
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
@@ -53,6 +53,8 @@ body {
 .flex-parent-main{
   @include flex-basics(row);  width: 100%;
   flex-wrap: 2;
+
+  @extend %small-padding;
 }
 
 .back-button { 
@@ -63,7 +65,6 @@ body {
   color: $white;
   border: white;
   margin:15px;
-  // padding: 5px;
   width: 15%;
   border-radius: 20px;
 }
