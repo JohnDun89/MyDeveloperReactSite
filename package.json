@@ -32,6 +32,5 @@
     "jest": "^22.1.4",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
-  },
-  "proxy": "http://localhost:5000/"
+  }
 }
