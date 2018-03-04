@@ -265,7 +265,7 @@ margin-top: -10px;
 }
 
 .expanded-content-links {
-  z-index: 1;
+ 
   @include fixed-height-and-width(400px, 550px);
   @extend %small-padding;
   background-color: $white;
