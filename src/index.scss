@@ -21,7 +21,7 @@ $acent: #F5CE41;
   @extend %small-padding;
   @include fixed-height-and-width(400px, 550px);
   flex: 0 auto;
-  background-color: #fff;
+  background-color: $dark;
   text-align: left;
 }
 
@@ -38,6 +38,7 @@ $acent: #F5CE41;
 
 body {
   font-family: $heading-font;
+  background-color: $white;
 }
 
 #nav-bar{
@@ -89,7 +90,9 @@ body {
   margin-left: 0px;
   border: 2px solid $dark;
   @extend %small-padding;
-  color: $dark;
+  color: $acent;
+  background-color: $dark;
+  border-bottom-color: $acent;
 }
 
 
@@ -98,11 +101,11 @@ body {
   z-index: -1;
   -webkit-transition:0.5s;
   @extend %box;
-  border: $main;
+  border: $dark;
   border-style: solid;
   border-left-style: hidden;
   border-top-style: hidden;
-  border-bottom-right-radius: 7px;
+  border-radius: 7px;
   transition: 0.5s;           
 }
 
@@ -120,7 +123,6 @@ body {
 
 .box-one::before, .box-one::after{
     z-index: -1;
-
   width: 100%;
   height:100%;
   z-index: 3;
@@ -135,15 +137,15 @@ body {
 
 .draw-corner::before{
   margin-top: -10px;
-  border-left: 3px solid $main;
-  border-top: 3px solid $main ;
+  border-left: 3px solid $acent;
+  border-top: 3px solid $acent ;
   -webkit-transform-origin: left top;
 }
 
 .draw-corner::after{
   margin-top: -10px;
-  border-top: 3px solid $main;
-  border-left: 3px solid $main;
+  border-top: 3px solid $acent;
+  border-left: 3px solid $acent;
   -webkit-transform-origin: left top;
 }
 
@@ -163,7 +165,7 @@ body {
   @include fixed-height-and-width(800px, 1000px);
   @include flex-basics(colum);
   background-color: $white;
-  border: $main;
+  border: $acent;
   border-style: solid;
   
   margin: 5px;
@@ -221,10 +223,12 @@ body {
 
 .box-normal-with-hover-transition{
   transition: background-color .5s ease-in-out;
+  transition: border .5s ease-in-out;
   @extend %box;
-  border: $main;
-  color: $main;
-  border-style: solid;
+  border: $acent;
+  border-width: 4px;
+  color: $white;
+  padding-left: 5%;
   font-size: 50px;
   border-radius: 5px;
 
@@ -233,7 +237,7 @@ body {
 .box-normal-with-hover-transition:hover{
   color: $white;
   background-color: $main;
-
+  border: solid $white ;
 }
 
 .list-item{
@@ -283,7 +287,7 @@ margin-top: -10px;
   font-family: $heading-font;
   font-size: 140px;
   font-weight: bold;
-  color: $main;
+  color: $white;
 }
 
 .tilt{
@@ -297,6 +301,7 @@ margin-top: -10px;
   color: $white;
   background-color: $dark;
   padding: 5%;
+
   position: fixed;
   width: 100%;
   height: 100%;
@@ -304,7 +309,8 @@ margin-top: -10px;
 }
 
 #splash-text-container{ 
-margin-top: 10%;
+  margin-right: 10%;
+  padding-right: 10%;
 
 }
 
