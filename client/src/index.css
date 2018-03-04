@@ -144,17 +144,20 @@ body {
 
 #animation-container {
   height: 800px;
-  width: 1000px; }
+  width: 1100px;
+  overflow: auto; }
 
 #main_canvas_container {
   height: 600px;
   width: 900px;
   background-color: white;
-  position: relative;
-  padding: 5%; }
+  position: relative; }
 
 .image {
-  position: absolute;
+  padding-left: 0px;
+  position: absolute; }
+
+#window {
   overflow: hidden; }
 
 .box-normal-with-hover-transition {

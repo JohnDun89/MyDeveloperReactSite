@@ -7,6 +7,7 @@ $dark: #173e43;
 $acent: #F5CE41;
 
 
+
 %small-padding {
     margin: 2%;
   padding: 5px;
@@ -192,20 +193,30 @@ body {
 }
 
 #animation-container{
- @include fixed-height-and-width(800px, 1000px); 
+ @include fixed-height-and-width(800px, 1100px); 
+ overflow: auto;
 }
 
 #main_canvas_container{
   @include fixed-height-and-width(600px, 900px);
   background-color: white;
   position: relative;
-  padding: 5%;
+  
+
 }
 
 .image {
-  position: absolute;
+
+  $imagepositionfront: 0px;
+  padding-left: $imagepositionfront;
+  position: absolute; 
+}
+
+#window{
   overflow: hidden;
 }
+
+
 
 // ---------------------------------------------------GitHub------------------------------------//
 
