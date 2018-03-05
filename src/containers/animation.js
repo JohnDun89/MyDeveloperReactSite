@@ -32,7 +32,7 @@ class Animation extends React.Component {
                     <img id="image-castle" className="image"  src="./assets/background-01.png"  />
                     <img id="image-back" className="image" style={{ paddingLeft: returnValueBack }} src="./assets/MidGround-01.png"/>
                     <img id="image-mid" className="image" style={{ paddingLeft: returnValueMid  }} src="./assets/FrontMidground-01.png" />
-                    <img id="image-front" className="image" style={{ paddingLeft: returnValueFront}} src="./assets/ForeGround-01.png" /> 
+                    <img id="image-front" className="image" style={{ paddingLeft: returnValueFront}} src="./assets/foreGround.png" /> 
                     <img id="window" className="image"  src="./assets/ForeGround-01.png" src="./assets/window-01.png"/>                   
                 </div>                                                            
            </div>
