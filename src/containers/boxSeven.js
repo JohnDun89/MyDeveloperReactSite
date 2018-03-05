@@ -10,7 +10,7 @@ class BoxThree extends React.Component {
                 <div>
                     <h1 >3.D.</h1>
                     <p>Examples from 3D modeling projects, fluid simulations, and Photogrammetry.</p>
-                    <h3>3.D.</h3>
+                    <h2>3.D.</h2>
                 </div>
             </div>
 

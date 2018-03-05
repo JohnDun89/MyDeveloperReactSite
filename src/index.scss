@@ -108,10 +108,11 @@ body {
 }
 
 .box h2{
-  margin:  177px;
+  margin: 10px;
   margin-left: -40px;
   font-size: 310px;
   color: $white;
+  font-family: $text-font;
 }
 
 .box p{
@@ -361,7 +362,3 @@ margin-top: -10px;
   transition: opacity 1s ease-in;
 }
 
-.box h3{
-  font-family: $text-font;
-  font-size: 200px;
-}
