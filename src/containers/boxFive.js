@@ -5,7 +5,7 @@ class BoxFive extends React.Component {
 
     render() {
         return (
-            <div className="box-normal-with-hover-transition"
+            <div className="box"
                 onClick={this.props.action}>
                  <h1>Code</h1>
             </div>

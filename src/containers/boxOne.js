@@ -26,9 +26,11 @@ class BoxOne extends React.Component {
 
     render() {
         return (
-            <div  className="box-one draw-corner"
+            <div  className="box"
                 onClick={this.props.action} >
-                <h1 className="hero-text">C.V.</h1>
+                <h1 >C.V.</h1>
+                <h2>C.V.</h2>
+
             </div>
         )
     }

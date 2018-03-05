@@ -5,10 +5,10 @@ class BoxThree extends React.Component {
 
     render() {
         return (
-            <div className="box-normal-with-hover-transition">
+            <div className="box">
             <div 
                 onClick={this.props.action}>
-                <h1 id="animation-title">Animation </h1>
+                <h1 >Animation </h1>
                 
             </div>
             </div>

@@ -66,23 +66,19 @@ class BoxContainer extends React.Component {
             )
        }
 
-    
-
-
-
     renderToggle(Component1, Component2, StateBoolean, toggleFunction, transition) {
         if (StateBoolean === true) {
             return (
-                <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true}}>
+                 <Tilt className="tilt" options={{ max: 10, speed: 1000, scale: 1, tansition: true}}>
                     <div >
                         {transition(Component1, toggleFunction)} 
                     </div>
-                </Tilt>
+                //  </Tilt>
              )
         }
          if (StateBoolean === false){
             return (
-                <div >
+                <div  >
                     <ReactCSSTransitionGroup
                             transitionName="main-react-transition"
                             transitionAppear={true}
@@ -96,24 +92,24 @@ class BoxContainer extends React.Component {
         }
     }
 
-    //   
-
-
-
     render() {
         return (
-            <div className="flex-parent-master" >
-                <div className="flex-parent-main">  
+            <div id="main-content-center">
+                 <div className="flex-parent-box-container" >
+                    <Tilt className="tilt" options={{ max: 0, speed: 1000, scale: 1, tansition: true }}>
+                        <BoxSix />
+                    </Tilt>            
                     {this.renderToggle(BoxOne, Cv, this.state.BoxOne, this.toggleBoxOneState, this.transition)} 
                     {this.renderToggle(BoxTwo, WebGl, this.state.BoxTwo, this.toggleBoxTwoState, this.transition)}
                     {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState, this.transition)}  
                     {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState, this.transition)}     
                     {this.renderToggle(BoxFive, Code, this.state.BoxFive, this.toggleBoxFiveState, this.transition)}
+
+             )
                 </div>
             </div>
         )
     }
-
 }
 
 export default BoxContainer;

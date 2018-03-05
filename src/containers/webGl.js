@@ -91,7 +91,7 @@ class WebGl extends React.Component {
             return(
             <main>
                 
-                <div className="expanded-content flex-parent-main" id="web-gl-box">
+                <div className="expanded-box" id="web-gl-box">
                             <button className="back-button" onClick={this.props.close} type="button" >Close</button>            
                     <div className="flex-parent-main">                   
                     <br/>

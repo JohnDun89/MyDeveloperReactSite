@@ -7,7 +7,7 @@ class Code extends React.Component {
 
       
         return (
-            <div className="expanded-content">
+            <div className="box">
                 <button className="back-button" alt="example of react js code."onClick={this.props.close} type="button" >Close</button>
                 <img i src="./assets/Component-Toggler.png" />
 

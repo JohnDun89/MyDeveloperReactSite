@@ -1,29 +1,16 @@
 $heading-font: 'Cormorant Garamond', serif;
 $text-font: 'Vollkorn', serif;
 $white: #ECEEE4;
-$main: #3fb0ac;
+$main: #328F8A;
 $dark: #173e43;
-$acent: #F5CE41;
+$acent: #E6C65D;
+
+$background-light:#232525;
+$background-dark: #1D1D1D;
 
 
 
-%small-padding {
-    margin: 2%;
-  padding: 5px;
-}
 
-@mixin fixed-height-and-width($height, $width) {
-  height: $height ;
-  width: $width ;
-}
-
-%box {
-  @extend %small-padding;
-  @include fixed-height-and-width(400px, 550px);
-  flex: 0 auto;
-  background-color: $dark;
-  text-align: left;
-}
 
 @mixin flex-basics($direction) {
   display: flex;
@@ -34,265 +21,122 @@ $acent: #F5CE41;
   flex-flow: row wrap;
 }
 
+@mixin expanded-box(){
+  width: 1200px;
+  margin: 10px;
+  padding: 10px 0 0 20px;
+  margin-top: 10px;
+  background-color: $white;
+  display: inline-block;
+  flex-grow: 1;
+  flex: 0 auto;
+  border-bottom: 10px solid $acent;
+  border-radius: 5px;
+}
 
+%box {
+
+  text-align: left;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+// %margin-and-padding-for-all-main-content{
+//   margin: 5%;
+//   padding: 5%;
+// }
 
 body {
   font-family: $heading-font;
-  background-color: $white;
+  background-color: $background-dark;
 }
 
 #nav-bar{
   background-color: $main;
   font-size: 30px;
   color: #fff;
-  padding-left: 7px;
+  padding-left: 3%;
   height: 20%;
   z-index: 1;
 }
 
-.flex-parent-main{
-  @include flex-basics(row);  width: 100%;
-  flex-wrap: 2;
-
-  @extend %small-padding;
+#main-content-center{
+  margin: auto;
+  width: 80%;
 }
 
-.back-button { 
-  font-size: 20px;
-  font-weight: bold;
-  font-family: $heading-font;
-  background-color: $main;
-  color: $white;
-  border: white;
-  margin:15px;
-  width: 15%;
-  border-radius: 20px;
-}
-
-.back-button:hover {
-  border: $acent;
-  border-color: $acent;
-  border-width: 4px;
-  border-radius: 20px;
-}
-
-.accent{
-  color: $acent;
-}
-
-.text-font{
-  font-family: $text-font;
-}
-
-#bio {
-  padding-left: 2%;
-  width: 100%;
-  margin-left: 0px;
-  border: 2px solid $dark;
-  @extend %small-padding;
-  color: $acent;
-  background-color: $dark;
-  border-bottom-color: $acent;
-}
-
-
-// ---------------------------------------------------C.V.------------------------------------//
-.box-one{
-  z-index: -1;
-  -webkit-transition:0.5s;
-  @extend %box;
-  border: $dark;
-  border-style: solid;
-  border-left-style: hidden;
-  border-top-style: hidden;
-  border-radius: 7px;
-  transition: 0.5s;           
-}
-
-.expanded-cv{
-  font-family: $text-font;
-  width: 100%;
-  max-width: 900px;
-}
-
-.topline{
-  border-top: solid;
-  border-top-color: $acent;
-  
-}
-
-.box-one::before, .box-one::after{
-    z-index: -1;
-  width: 100%;
-  height:100%;
-  z-index: 3;
-  content:'';
-  position: absolute;
-  top:0;
-  left:0;
-  box-sizing: border-box;
-  -webkit-transform: scale(0);
-  transition: 0.5s;
-}
-
-.draw-corner::before{
-  margin-top: -10px;
-  border-left: 3px solid $acent;
-  border-top: 3px solid $acent ;
-  -webkit-transform-origin: left top;
-}
-
-.draw-corner::after{
-  margin-top: -10px;
-  border-top: 3px solid $acent;
-  border-left: 3px solid $acent;
-  -webkit-transform-origin: left top;
-}
-
-.box-one:hover::after, .box-one:hover::before {
-  -webkit-transform: scale(.99);
-}
-
-// ---------------------------------------------------Webgl------------------------------------//
-
-#box-two{
-  @extend %box;
-  z-index: -1;
-}
-
-#web-gl-box{
-  @extend %small-padding;
-  @include fixed-height-and-width(800px, 1000px);
-  @include flex-basics(colum);
-  background-color: $white;
-  border: $acent;
-  border-style: solid;
-  
-  margin: 5px;
-}
-
-.main-image{
-  transition: background .5s ease-in-out;
-  background: url("sketch-01.png");
-}
-
-.main-image:hover{
-  background: url("blenderimage-01.png")
-}
-
-#web-gl-title{
-  position: absolute;
-  color: #fff;
-  text-align: bottom;
-  font-size: 160px;
-}
-// ---------------------------------------------------Animation------------------------------------//
-
-#animation-title{
-  position: absolute;
-  text-align: bottom;
-  font-size: 120px;
-}
-
-#animation-container{
- @include fixed-height-and-width(800px, 1150px); 
-}
-
-#main_canvas_container{
-  @include fixed-height-and-width(600px, 900px);
-  background-color: white;
-  position: relative;
-  
+.flex-parent-box-container{
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 
 }
 
-.image {
-
-  $imagepositionfront: 0px;
-  padding-left: $imagepositionfront;
-  position: absolute; 
-}
-
-#window{
+.box{
+  width: 400px;
+  height: 600px;
+  margin: 10px;
+  padding: 10px 0 0 20px;
+  margin-top: 10px;
+  background-color: $background-light;
+  display: inline-block;
+  flex-grow: 1;
+  flex: 0 auto;
+  border-bottom: 10px solid $acent;
+  border-radius: 5px;
   overflow: hidden;
 }
 
-
-
-// ---------------------------------------------------GitHub------------------------------------//
-
-.box-normal-with-hover-transition{
-  transition: background-color .5s ease-in-out;
-  transition: border .5s ease-in-out;
-  @extend %box;
-  border: $acent;
-  border-width: 4px;
-  color: $white;
-  padding-left: 5%;
-  font-size: 50px;
-  border-radius: 5px;
-
+.box:hover {
+  transition: 0.7s;  
+  color: $acent;
 }
 
-.box-normal-with-hover-transition:hover{
-  color: $white;
+.box h1{
   background-color: $main;
-  border: solid $white ;
+  width: 90%;
+  padding: 5px;
+  margin-left: 2px;
+  color: $white;
+  border-radius: 3px;
 }
 
-.list-item{
-  border-color: $main;
-  border-style: solid;
-  padding-left: 15px;
-  margin: 2px;
-}
-
-.list-item:hover {
-  border-color: $acent;
-    border-width: 7px;
-}
-
-.li-title{
-font-size: 26px;
-}
-
-.li-keywords{
-font-size: 16px;
-margin-top: -10px;
-}
-
-.expanded-content {
-  padding: 2%;
-  margin: 2%;
- 
-  background-color: $white;
-}
-
-.expanded-content-links {
- 
-  @include fixed-height-and-width(400px, 550px);
-  @extend %small-padding;
-  background-color: $white;
-}
-
-
-
-
-.button-container {
-  display: flex;
-  justify-content: right;
-}
-
-.hero-text {
-  font-family: $heading-font;
-  font-size: 140px;
-  font-weight: bold;
+.box h2{
+  margin:  240px;
+  margin-left: -40px;
+  font-size: 310px;
   color: $white;
 }
 
-.tilt{
-    @extend %small-padding;
+
+
+.box p{
+  color: $white;
+  width: 80%;
+  padding: 5px;
+  margin-left: 2px;
+  font-size: 20px;
 }
+
+.expanded-box{
+  @include expanded-box(); 
+  height: 1700px;
+}
+
+#web-gl-box{
+  height: 800px;
+}
+
+
+
+
+
+
+
+// -----------------------------------------------splash box ------------------//
 
 #splash-box{
   display: flex;
@@ -313,6 +157,144 @@ margin-top: -10px;
   padding-right: 10%;
 
 }
+
+//-------------------------------------------------main content--------------//
+
+
+
+
+
+// ---------------------------------------------------C.V.------------------------------------//
+.box-with-corner-hover{
+  z-index: -1;
+  -webkit-transition:0.5s;
+  @extend %box;
+  transition: 0.5s;  
+        
+}
+
+.box-with-corner-hover::before, .box-with-corner-hover::after{
+  z-index: -1;
+  width: 100%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  -webkit-transform: scale(0);
+  transition: 0.7s;
+}
+
+.draw-corner::before{
+  margin-left: -5px;
+  margin-top: -5px;
+  border-left: 3px solid $acent;
+  border-top: 3px solid $acent ;
+  -webkit-transform-origin: left top;
+}
+
+.draw-corner::after{
+  margin-left: -5px;
+  margin-top: -5px;
+  border-top: 3px solid $acent;
+  border-left: 3px solid $acent;
+  -webkit-transform-origin: left top;
+}
+
+.box-with-corner-hover:hover::after, .box-with-corner-hover:hover::before {
+  -webkit-transform: scale(.97);
+}
+
+
+
+// ---------------------------------------------------Webgl------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+// .main-image{
+//   transition: background .5s ease-in-out;
+//   background: url("sketch-01.png");
+// }
+
+// .main-image:hover{
+//   background: url("blenderimage-01.png")
+// }
+
+
+
+
+
+
+
+// #animation-container{
+//  @include fixed-height-and-width(800px, 1150px); 
+// }
+
+
+
+// .image {
+
+//   $imagepositionfront: 0px;
+//   padding-left: $imagepositionfront;
+//   position: absolute; 
+// }
+
+// #window{
+//   overflow: hidden;
+// }
+
+
+
+// .box-normal-with-hover-transition{
+//   transition: background-color .5s ease-in-out;
+//   transition: border .5s ease-in-out;
+//   @extend %box;
+//   border: $acent;
+//   border-width: 4px;
+//   color: $white;
+//   padding-left: 5%;
+//   font-size: 50px;
+//   border-radius: 5px;
+
+// }
+
+// .box-normal-with-hover-transition:hover{
+//   color: $white;
+//   background-color: $main;
+//   border: solid $white ;
+// }
+
+// .list-item{
+//   border-color: $main;
+//   border-style: solid;
+//   padding-left: 15px;
+//   margin: 2px;
+// }
+
+// .list-item:hover {
+//   border-color: $acent;
+//     border-width: 7px;
+// }
+
+// .li-title{
+// font-size: 26px;
+// }
+
+// .li-keywords{
+// font-size: 16px;
+// margin-top: -10px;
+// }
 
 .introduction-appear {
  transform: translate3d(0, 100%, 0)
@@ -343,7 +325,6 @@ margin-top: -10px;
 }
 
 .main-react-transition-leave.main-react-transition-leave-active {
-
   opacity: 0.01;
   transition: opacity 1s ease-in;
 }
