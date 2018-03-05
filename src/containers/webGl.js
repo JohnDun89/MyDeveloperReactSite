@@ -93,11 +93,13 @@ class WebGl extends React.Component {
                 
                 <div className="expanded-box" id="web-gl-box">
                             <button className="back-button" onClick={this.props.close} type="button" >Close</button>            
-                    <div className="flex-parent-main">                   
+                            <div className="expanded-box-flex">                   
                     <br/>
-                    </div>
+                    
+                    <h2>Please be patient - sometimes the Heroku serves take a while to load this. </h2>
                     <p>Left click to rotate, mouse wheel to zoom and right click to move.</p>
                     <div id='main_canvas_container'></div>
+                </div>
                 </div>
     
             </main>

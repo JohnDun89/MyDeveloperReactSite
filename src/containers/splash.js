@@ -13,7 +13,6 @@ class Splash extends React.Component {
         return (
             <div id="splash-box"  onWheel={this.props.splashClicked}>
                 <div id="splash-text-container">
-                    {/* to use this the item must have a key .  */}
                     <ReactCSSTransitionGroup
                         transitionName="introduction"
                         transitionAppear={true}

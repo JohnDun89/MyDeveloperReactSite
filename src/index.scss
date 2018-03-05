@@ -8,10 +8,6 @@ $acent: #E6C65D;
 $background-light:#232525;
 $background-dark: #1D1D1D;
 
-
-
-
-
 @mixin flex-basics($direction) {
   display: flex;
   flex-direction: $direction;
@@ -129,11 +125,14 @@ body {
 .expanded-box{
   @include expanded-box(); 
   font-family: $text-font;
+}
 
+.expanded-box-flex{
+    text-align:center;
 }
 
 #animation-height{
-  height: 800px;
+  height: 810px;
 }
 
 #web-gl-box{
@@ -145,14 +144,6 @@ body {
   width: 1000px;
   height: 800px;
 }
-
-
-
-
-
-
-
-// -----------------------------------------------splash box ------------------//
 
 #splash-box{
   display: flex;
@@ -170,24 +161,19 @@ body {
 #splash-text-container{ 
   margin-right: 10%;
   padding-right: 10%;
-
 }
 
-//-------------------------------------------------main content--------------//
+.accent{
+  color: $acent;
+}
 
 
-
-
-
-// ---------------------------------------------------C.V.------------------------------------//
 .box-with-corner-hover{
   z-index: -1;
   -webkit-transition:0.5s;
   @extend %box;
   transition: 0.5s;         
 }
-
-
 
 .box-with-corner-hover::before, .box-with-corner-hover::after{
   z-index: -1;
@@ -222,19 +208,6 @@ body {
 .box-with-corner-hover:hover::after, .box-with-corner-hover:hover::before {
   -webkit-transform: scale(.97);
 }
-
-
-
-// ---------------------------------------------------Webgl------------------------------------//
-
-
-
-
-
-
-
-
-
 
 //display images
 
@@ -273,17 +246,6 @@ body {
   margin-top: 280px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .image {
   $imagepositionfront: 0px;
   padding-left: $imagepositionfront;
@@ -293,8 +255,6 @@ body {
 #window{
   overflow: hidden;
 }
-
-
 
 .box-normal-with-hover-transition{
   transition: background-color .5s ease-in-out;
@@ -307,6 +267,7 @@ body {
 }
 
 .box-normal-with-hover-transition h1{
+  border: 4px solid $main;
     transition: border .5s ease-in-out; 
 }
 
@@ -344,7 +305,6 @@ margin-top: -10px;
   display: flex;
   flex-direction: column;
   align-content: center;
-  
   justify-content: center;
   height: 700px;
 }
@@ -356,6 +316,10 @@ margin-top: -10px;
   background-color: $dark;
   border: 5px none;
   border-radius: 7px;
+}
+
+#code-picture{
+  margin: 10px;
 }
 
 

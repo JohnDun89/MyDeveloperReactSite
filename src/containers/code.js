@@ -7,13 +7,13 @@ class Code extends React.Component {
 
       
         return (
-            <div className="box">
-                <button className="back-button" alt="example of react js code."onClick={this.props.close} type="button" >Close</button>
-                <img i src="./assets/Component-Toggler.png" />
-
-            <div >
+            <div className="expanded-box">
+                
+                <button id="code-picture" className="back-button" alt="example of react js code."onClick={this.props.close} type="button" >Close</button>
+                <div className="expanded-box-flex">
+                <img src="./assets/Component-Toggler.png" />
                 <p>Here I created a dynamic function to toggle the main components. It accepts the components that are <br/>to be switched between, a state Boolean of the component, a callback and a tranistion that can be applied. </p>
-            </div>
+                </div>
             </div>
         )
     }
