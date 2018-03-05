@@ -105,7 +105,7 @@ class BoxContainer extends React.Component {
                     {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState, this.transition)}     
                     {this.renderToggle(BoxFive, Code, this.state.BoxFive, this.toggleBoxFiveState, this.transition)}
 
-             )
+             
                 </div>
             </div>
         )

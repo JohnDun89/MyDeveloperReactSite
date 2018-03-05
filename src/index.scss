@@ -127,12 +127,18 @@ body {
   font-family: $text-font;
 }
 
+.expanded-box-cv {
+  width: 100%;
+  background-color: $white;
+  padding: 20px;
+}
+
 .expanded-box-flex{
     text-align:center;
 }
 
 #animation-height{
-  height: 810px;
+  height: 920px;
 }
 
 #web-gl-box{
@@ -230,7 +236,7 @@ body {
   background: url("castle.png");
   background-repeat: no-repeat;
   margin-left: -90px;
-  margin-top: 330px;
+  margin-top: 272px;
 }
 
  #main-image-animation:hover{
@@ -348,7 +354,6 @@ margin-top: -10px;
 
 .main-react-transition-leave{
   opacity: 1;
-
 }
 
 .main-react-transition-leave.main-react-transition-leave-active {
