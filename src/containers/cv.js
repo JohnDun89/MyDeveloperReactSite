@@ -14,7 +14,7 @@ class Cv extends React.Component {
                          <div className="expanded-box-cv">
                     <button className="back-button" onClick={this.props.close} type="button" >Close</button>
                             <h1>John Duncan</h1>
-                                <h2>January 2018 Codeclan graduate, looking for Junior developer opportunities in the technology industry. I  would love to work with Javascript creating robust web content and in the future help with a meaningful open source project.</h2>
+                                <h2>January 2018 Codeclan graduate, looking for Front End Developer opportunities in the technology industry. I  would love to work with React and SCSS.</h2>
                                  <br/>
                             <div className="topline">
                                 <h1>Codeclan</h1>
@@ -59,7 +59,7 @@ class Cv extends React.Component {
                             </div>
                             <div className="topline">
                                 <h1>Interests</h1>
-                                        <p>I love enduro mountain biking and road cycling equally and could spend lots of time experimenting with CGI software like Blender. I am also teaching myself Illustrator. </p>
+                                        <p>I love enduro mountain biking and road cycling equally and experimenting with CGI software like Blender. I am also teaching myself Illustrator. </p>
 
                             </div>
                           </div>  
