@@ -19,9 +19,9 @@ class Github extends React.Component {
               
         return (
             // this class needs changed so box epands to cover all links
-            <div className="expanded-content-links expanded-padding">
+            <div className=" expanded-box" id="git">
                 <button className="back-button" onClick={this.props.close} type="button" >Close</button>
-                <div >
+                <div  >
                     <h1>Links To My projects</h1>
                     <Link text={this.state.Github} />
                     <Link text={this.state.Budgeting}/>

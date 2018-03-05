@@ -23,6 +23,7 @@ $background-dark: #1D1D1D;
 
 @mixin expanded-box(){
   width: 1200px;
+  height: 100%;
   margin: 10px;
   padding: 10px 0 0 20px;
   margin-top: 10px;
@@ -35,16 +36,10 @@ $background-dark: #1D1D1D;
 }
 
 %box {
-
   text-align: left;
   display: inline-block;
   flex-grow: 1;
 }
-
-// %margin-and-padding-for-all-main-content{
-//   margin: 5%;
-//   padding: 5%;
-// }
 
 body {
   font-family: $heading-font;
@@ -58,6 +53,17 @@ body {
   padding-left: 3%;
   height: 20%;
   z-index: 1;
+  border-bottom: 4px solid $dark;
+}
+
+#bio{
+  background-color: $main;
+  color: #fff;
+  padding-left: 3%;
+  height: 20%;
+  margin-bottom: 10px;
+  border-bottom: 4px solid $dark;
+  border-radius: 3px;
 }
 
 #main-content-center{
@@ -81,6 +87,7 @@ body {
   margin: 10px;
   padding: 10px 0 0 20px;
   margin-top: 10px;
+  color:  $white;
   background-color: $background-light;
   display: inline-block;
   flex-grow: 1;
@@ -105,13 +112,11 @@ body {
 }
 
 .box h2{
-  margin:  240px;
+  margin:  177px;
   margin-left: -40px;
   font-size: 310px;
   color: $white;
 }
-
-
 
 .box p{
   color: $white;
@@ -123,10 +128,21 @@ body {
 
 .expanded-box{
   @include expanded-box(); 
-  height: 1700px;
+  font-family: $text-font;
+
+}
+
+#animation-height{
+  height: 800px;
 }
 
 #web-gl-box{
+   height: 1000px;
+}
+
+#main_canvas_container{
+  position: absolute;
+  width: 1000px;
   height: 800px;
 }
 
@@ -145,7 +161,6 @@ body {
   color: $white;
   background-color: $dark;
   padding: 5%;
-
   position: fixed;
   width: 100%;
   height: 100%;
@@ -169,9 +184,10 @@ body {
   z-index: -1;
   -webkit-transition:0.5s;
   @extend %box;
-  transition: 0.5s;  
-        
+  transition: 0.5s;         
 }
+
+
 
 .box-with-corner-hover::before, .box-with-corner-hover::after{
   z-index: -1;
@@ -220,16 +236,44 @@ body {
 
 
 
+//display images
+
+.main-image{
+  width: 500px;
+  height: 450px;
+  margin-left: -90px;
+  transition: background .5s ease-in-out;
+  background: url("sketch-01.png");
+}
+
+.main-image:hover{
+  background: url("blenderimage-01.png")
+}
+
+#main-image-animation{
+  width: 700px;
+  height: 750px;
+  transition: background .5s ease-in-out;
+  background: url("castle.png");
+  background-repeat: no-repeat;
+  margin-left: -90px;
+  margin-top: 330px;
+}
+
+ #main-image-animation:hover{
+    background: url("castlegold.png");
+ }
+
+#git-logo{
+  width: 500px;
+  height: 400px;
+  background: url("github-logo.png");
+  background-repeat: no-repeat;
+  margin-left: 150px;
+  margin-top: 280px;
+}
 
 
-// .main-image{
-//   transition: background .5s ease-in-out;
-//   background: url("sketch-01.png");
-// }
-
-// .main-image:hover{
-//   background: url("blenderimage-01.png")
-// }
 
 
 
@@ -237,64 +281,83 @@ body {
 
 
 
-// #animation-container{
-//  @include fixed-height-and-width(800px, 1150px); 
-// }
 
 
 
-// .image {
+.image {
+  $imagepositionfront: 0px;
+  padding-left: $imagepositionfront;
+  position: absolute; 
+}
 
-//   $imagepositionfront: 0px;
-//   padding-left: $imagepositionfront;
-//   position: absolute; 
-// }
-
-// #window{
-//   overflow: hidden;
-// }
-
+#window{
+  overflow: hidden;
+}
 
 
-// .box-normal-with-hover-transition{
-//   transition: background-color .5s ease-in-out;
-//   transition: border .5s ease-in-out;
-//   @extend %box;
-//   border: $acent;
-//   border-width: 4px;
-//   color: $white;
-//   padding-left: 5%;
-//   font-size: 50px;
-//   border-radius: 5px;
 
-// }
+.box-normal-with-hover-transition{
+  transition: background-color .5s ease-in-out;
+  color: $white;
+}
 
-// .box-normal-with-hover-transition:hover{
-//   color: $white;
-//   background-color: $main;
-//   border: solid $white ;
-// }
+.box-normal-with-hover-transition:hover{
+  color: $white;
+  background-color: $main;
+}
 
-// .list-item{
-//   border-color: $main;
-//   border-style: solid;
-//   padding-left: 15px;
-//   margin: 2px;
-// }
+.box-normal-with-hover-transition h1{
+    transition: border .5s ease-in-out; 
+}
 
-// .list-item:hover {
-//   border-color: $acent;
-//     border-width: 7px;
-// }
+.box-normal-with-hover-transition:hover h1{
+  border: 4px solid $white;
+  color: $white;
+  background-color: $main;
+}
 
-// .li-title{
-// font-size: 26px;
-// }
 
-// .li-keywords{
-// font-size: 16px;
-// margin-top: -10px;
-// }
+.list-item{
+  border-color: $main;
+  border-style: solid;
+  transition: border .4s ease-in-out;
+  padding-left: 15px;
+  margin: 2px;
+
+}
+
+.list-item:hover {
+  border-color: $acent;
+    border-width: 5px;
+}
+
+.li-title{
+font-size: 26px;
+}
+
+.li-keywords{
+font-size: 16px;
+margin-top: -10px;
+}
+
+#git{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  
+  justify-content: center;
+  height: 700px;
+}
+
+.back-button{
+  width: 100px;
+  height: 40px;
+  color: $white;
+  background-color: $dark;
+  border: 5px none;
+  border-radius: 7px;
+}
+
 
 .introduction-appear {
  transform: translate3d(0, 100%, 0)

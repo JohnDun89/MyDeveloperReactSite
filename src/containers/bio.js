@@ -14,7 +14,6 @@ class Bio extends React.Component {
                 <h1>john@johnduncanphoto.com</h1>
                 </div>
                 <div>
-                    <p id="bio-text">Codeclan graduate seeking Developer Jobs with a particular interest in React, NodeJS, Front End, SCSS and 3D in browser.</p>
                 </div>
 
             </div>

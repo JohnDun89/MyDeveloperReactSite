@@ -73,7 +73,7 @@ class BoxContainer extends React.Component {
                     <div >
                         {transition(Component1, toggleFunction)} 
                     </div>
-                //  </Tilt>
+                  </Tilt>
              )
         }
          if (StateBoolean === false){
