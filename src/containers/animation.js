@@ -1,7 +1,4 @@
 import React from 'react';
-import BackButton from './backButton.js'
-import Tilt from 'react-tilt'
-import $ from 'jquery'; 
 
 class Animation extends React.Component {
 
@@ -29,11 +26,11 @@ class Animation extends React.Component {
                     <h2>Hover over the image to change perspective. 
                         <br/>The image container dynamically detects mouse movement, which alters the SCSS.</h2>
                 <div id="animation-container" onMouseMove={this._onMouseMove.bind(this)}>
-                    <img id="image-castle" className="image"  src="./assets/background-01.png"  />
-                    <img id="image-back" className="image" style={{ paddingLeft: returnValueBack }} src="./assets/MidGround-01.png"/>
-                    <img id="image-mid" className="image" style={{ paddingLeft: returnValueMid  }} src="./assets/FrontMidground-01.png" />
-                    <img id="image-front" className="image" style={{ paddingLeft: returnValueFront}} src="./assets/foreGround.png" /> 
-                    <img id="window" className="image"  src="./assets/ForeGround-01.png" src="./assets/window-01.png"/>                   
+                    <img id="image-castle" className="image" alt="" src="./assets/background-01.png"  />
+                    <img id="image-back" className="image" alt="" style={{ paddingLeft: returnValueBack }} src="./assets/MidGround-01.png"/>
+                    <img id="image-mid" className="image" alt="" style={{ paddingLeft: returnValueMid  }} src="./assets/FrontMidground-01.png" />
+                    <img id="image-front" className="image" alt="" style={{ paddingLeft: returnValueFront}} src="./assets/foreGround.png" /> 
+                    <img id="window" className="image" alt="" src="./assets/ForeGround-01.png" src="./assets/window-01.png"/>                   
                 </div>                                                            
            </div>
         )
