@@ -12,6 +12,8 @@ import Tilt from 'react-tilt'
 import Github from './github.js'
 import Code from './code.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import BoxSeven from "./boxSeven";
+import ThreeD from "./3d.js";
 
 
 class BoxContainer extends React.Component {
@@ -23,7 +25,8 @@ class BoxContainer extends React.Component {
             BoxTwo: true,
             BoxThree: true,
             BoxFour: true,
-            BoxFive: true
+            BoxFive: true,
+            BoxSeven: true
         }
 
         this.toggleBoxOneState = this.toggleBoxOneState.bind(this)
@@ -31,6 +34,7 @@ class BoxContainer extends React.Component {
         this.toggleBoxThreeState = this.toggleBoxThreeState.bind(this)
         this.toggleBoxFourState = this.toggleBoxFourState.bind(this)
         this.toggleBoxFiveState = this.toggleBoxFiveState.bind(this)
+        this.toggleBoxSevenState = this.toggleBoxSevenState.bind(this)
     }
 
     toggleBoxOneState() {
@@ -51,6 +55,10 @@ class BoxContainer extends React.Component {
 
     toggleBoxFiveState() {
         this.setState({ BoxFive: !this.state.BoxFive })
+    }
+
+    toggleBoxSevenState() {
+        this.setState({ BoxSeven: !this.state.BoxSeven })
     }
 
     transition (Component, callback, boolean) {
@@ -104,6 +112,7 @@ class BoxContainer extends React.Component {
                     {this.renderToggle(BoxThree, Animation, this.state.BoxThree, this.toggleBoxThreeState, this.transition)}  
                     {this.renderToggle(BoxFour, Github, this.state.BoxFour, this.toggleBoxFourState, this.transition)}     
                     {this.renderToggle(BoxFive, Code, this.state.BoxFive, this.toggleBoxFiveState, this.transition)}
+                    {this.renderToggle(BoxSeven, ThreeD, this.state.BoxSeven, this.toggleBoxSevenState, this.transition)}
 
              
                 </div>
