@@ -96,7 +96,7 @@ class WebGl extends React.Component {
                             <div className="expanded-box-flex">                   
                     <br/>
                     
-                    <h2>Please be patient - sometimes the Heroku serves take a while to load this. </h2>
+                    <h2>Please be patient - sometimes the Heroku servers take a while to load the model. </h2>
                     <p>Left click to rotate, mouse wheel to zoom and right click to move.</p>
                     <div id='main_canvas_container'></div>
                 </div>

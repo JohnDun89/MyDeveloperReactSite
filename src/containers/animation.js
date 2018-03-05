@@ -27,7 +27,7 @@ class Animation extends React.Component {
             <div className="expanded-box" id="animation-height"ref="elem">               
                     <button className="back-button" onClick={this.props.close} type="button" >Close</button>                                         
                     <h2>Hover over the image to change perspective. 
-                        <br/>The image container dynamically detects mouse movment, which alters the SCSS.</h2>
+                        <br/>The image container dynamically detects mouse movement, which alters the SCSS.</h2>
                 <div id="animation-container" onMouseMove={this._onMouseMove.bind(this)}>
                     <img id="image-castle" className="image"  src="./assets/background-01.png"  />
                     <img id="image-back" className="image" style={{ paddingLeft: returnValueBack }} src="./assets/MidGround-01.png"/>
