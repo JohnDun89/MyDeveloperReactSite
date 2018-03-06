@@ -13,8 +13,6 @@ $background-dark: #1D1D1D;
   flex-direction: $direction;
   align-items: top;
   justify-content: top;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
 }
 
 @mixin expanded-box(){
@@ -29,6 +27,19 @@ $background-dark: #1D1D1D;
   flex: 0 auto;
   border-bottom: 10px solid $acent;
   border-radius: 5px;
+}
+
+@mixin width-and-height($width, $height){
+  width: $width;
+  height: $height;
+}
+ 
+%flex{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
 %box {
@@ -74,12 +85,10 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-flow: row wrap;
-
 }
 
 .box{
-  width: 400px;
-  height: 600px;
+  @include width-and-height(400px, 600px);
   margin: 10px;
   padding: 10px 0 0 20px;
   margin-top: 10px;
@@ -153,16 +162,14 @@ body {
 }
 
 #splash-box{
-  display: flex;
+  @extend %flex;
   text-align: left;
-  align-content: center;
   color: $white;
   background-color: $dark;
   padding: 5%;
   position: fixed;
   width: 100%;
   height: 100%;
- justify-content: center;
 }
 
 #splash-text-container{ 
@@ -173,7 +180,6 @@ body {
 .accent{
   color: $acent;
 }
-
 
 .box-with-corner-hover{
   z-index: -1;
@@ -205,22 +211,15 @@ body {
 }
 
 .draw-corner::after{
-  margin-left: -5px;
-  margin-top: -5px;
-  border-top: 3px solid $acent;
-  border-left: 3px solid $acent;
-  -webkit-transform-origin: left top;
+  @extend .draw-corner;
 }
 
 .box-with-corner-hover:hover::after, .box-with-corner-hover:hover::before {
   -webkit-transform: scale(.97);
 }
 
-//display images
-
 .main-image{
-  width: 500px;
-  height: 450px;
+  @include width-and-height(500px, 450px);
   margin-left: -90px;
   transition: background .5s ease-in-out;
   background: url("sketch-01.png");
@@ -231,8 +230,7 @@ body {
 }
 
 #main-image-animation{
-  width: 700px;
-  height: 750px;
+  @include width-and-height(700px, 750px);
   transition: background .5s ease-in-out;
   background: url("castle.png");
   background-repeat: no-repeat;
@@ -245,8 +243,7 @@ body {
  }
 
 #git-logo{
-  width: 500px;
-  height: 400px;
+  @include width-and-height(500px, 400px);
   background: url("github-logo.png");
   background-repeat: no-repeat;
   margin-left: 150px;
@@ -284,14 +281,12 @@ body {
   background-color: $main;
 }
 
-
 .list-item{
   border-color: $main;
   border-style: solid;
   transition: border .4s ease-in-out;
   padding-left: 15px;
   margin: 2px;
-
 }
 
 .list-item:hover {
@@ -309,16 +304,13 @@ margin-top: -10px;
 }
 
 #git{
-  display: flex;
+  @extend %flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
   height: 700px;
 }
 
 .back-button{
-  width: 100px;
-  height: 40px;
+  @include width-and-height(100px, 40px);
   color: $white;
   background-color: $dark;
   border: 5px none;
@@ -328,7 +320,6 @@ margin-top: -10px;
 #code-picture{
   margin: 10px;
 }
-
 
 .introduction-appear {
  transform: translate3d(0, 100%, 0)
