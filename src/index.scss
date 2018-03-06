@@ -5,8 +5,8 @@ $main: #328F8A;
 $dark: #173e43;
 $acent: #E6C65D;
 
-$background-light:#232525;
-$background-dark: #1D1D1D;
+$background-light:#292b2b;
+$background-dark: rgb(28, 29, 32);
 
 @mixin flex-basics($direction) {
   display: flex;
