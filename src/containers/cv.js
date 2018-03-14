@@ -33,19 +33,29 @@ class Cv extends React.Component {
                                     <br/>
                             </div>  
                             <div className="topline">
-                                <h1>Employment </h1>
+                              <h1>Employment </h1>
                                 <h2>Freelance Photographer, Edinburgh </h2>
                                     <h3>April 2013 - PRESENT</h3>
-                                        <p>I have been running my own business as a freelance Photographer and Retoucher, working with agencies and clients, executing their briefs. 
-                                            I have had work published internationally and have been responsible for all aspects of running this business. I also regularly assist and work as a freelance retoucher using Adobe Photoshop CC. 
-                                        </p>
+                                            <p>Responsible for running all aspects of own business.</p>
+                                            <p>Excellent client communication, interpreting briefs. </p>
+                                            <p>Work published Internationally.  </p>
+                                            <p>Strong visual skills.  </p>
+                                            <p>Meticulous planning an eye for detail.  </p>
+                                            <p>Marketing for business. </p>
                                 <h2>Edinburgh Bicycle Co-Operative, Bike mechanic, sales. </h2>
                                     <h3>April 2015 - July 2017 and April 2012 - July 2013</h3>
-                                        <p>During my first period with this employer I was a specialist in bike sales, selling the most bikes in the company regularly and on a secret shopper review got 96%. 
-                                        Recently, I was a mechanic often involved with warranty assessment requiring accurate, careful, technical descriptions to liaise between customer and buying department. I was sent to our bike to work partners to speak to them about our bike to work scheme.
-                                        </p> 
+                                            <p>Plus five years in customer facing role.  </p>
+                                            <p>Excellent sales skills, 96% in secret shopper.  </p>
+                                            <p>Clear, delicate, technical communication over warranty issues with customer and buying department. </p>
+                                            <p>Sent to company partners to speak about Bike to Work scheme. </p>
+                                            <p>Warranty mechanic requiring analytical assessments and problem solving. </p>
                                         <br />
-               
+                                <h2>Photographic Retoucher and Photographic Assistant </h2>
+                                     <h3>April 2013 - PRESENT</h3>
+                                            <p>Professional level Retouching with Adobe Photoshop CC. </p>
+                                            <p>Interpreting client briefs. </p>
+                                            <p>Regularly assisted world class Photographer. </p>
+                                            <p>Logistical planning for shoots and research. </p>
                             </div>
                             <div className="topline">
                                 <h1>Education</h1>
