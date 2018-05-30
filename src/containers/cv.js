@@ -38,7 +38,9 @@ class Cv extends React.Component {
                                     <h3>April 2013 - PRESENT</h3>
                                             <p>Responsible for running all aspects of own business.</p>
                                             <p>Excellent client communication, interpreting briefs. </p>
+                                            <p>Team work was instrumental to success, recognising the value of  co-creators, listening to their input and allowing their specialities  to impact the product. </p>
                                             <p>Work published Internationally.  </p>
+                                            <p> Pitching for work, presenting to potential clients.  </p>
                                             <p>Strong visual skills.  </p>
                                             <p>Meticulous planning an eye for detail.  </p>
                                             <p>Marketing for business. </p>
@@ -69,7 +71,7 @@ class Cv extends React.Component {
                             </div>
                             <div className="topline">
                                 <h1>Interests</h1>
-                                        <p>I love enduro mountain biking and road cycling equally and experimenting with CGI software like Blender. I am also teaching myself Illustrator. </p>
+                                        <p>I love enduro mountain biking and road cycling equally and experimenting with CGI software like Blender. </p>
 
                             </div>
                           </div>  
